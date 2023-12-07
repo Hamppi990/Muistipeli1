@@ -11,44 +11,91 @@ namespace muistipeli
 {
     public partial class Form2 : Form
     {
+
         public Form2()
         {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "KeskitasonMuistipelinTulos.txt");
             InitializeComponent();
+            if (File.Exists(filePath))
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                if (lines.Length > 0)
+                {
+                    lblTime2.Text = lines[0];
+                    lblStatus2.Text = lines[1];
+                    lblMatch2.Text = lines[2];
+                }
+            }
+            else
+            {
+                Console.WriteLine("Tiedostoa ei löytynyt.");
+            }
+            string filePath1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "HelponMuistipelinTulos.txt");
+            InitializeComponent();
+            if (File.Exists(filePath1))
+            {
+                string[] lines = File.ReadAllLines(filePath1);
+                if (lines.Length > 0)
+                {
+                    lblTime.Text = lines[0];
+                    lblStatus.Text = lines[1];
+                    lblMatch.Text = lines[2];
+                }
+            }
+            else
+            {
+                Console.WriteLine("Tiedostoa ei löytynyt.");
+            }
+            string filePath2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "VaikeanMuistipelinTulos.txt");
+            InitializeComponent();
+            if (File.Exists(filePath2))
+            {
+                string[] lines = File.ReadAllLines(filePath2);
+                if (lines.Length > 0)
+                {
+                    lblTime3.Text = lines[0];
+                    lblStatus3.Text = lines[1];
+                    lblMatch3.Text = lines[2];
+                }
+            }
+            else
+            {
+                Console.WriteLine("Tiedostoa ei löytynyt.");
+            }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-
-            if (form1 == null)
-            {
-                form1 = new Form1();
-            }
+            Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault() ?? new Form1();
             form1.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Form3 form3 = Application.OpenForms.OfType<Form3>().FirstOrDefault();
+            Form4 form4 = Application.OpenForms.OfType<Form4>().FirstOrDefault() ?? new Form4();
+            form4.Show();
 
-            if (form3 == null)
-            {
-                form3 = new Form3();
-            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Form3 form3 = Application.OpenForms.OfType<Form3>().FirstOrDefault() ?? new Form3();
             form3.Show();
+        }
+
+        private void Vaikeustaso_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

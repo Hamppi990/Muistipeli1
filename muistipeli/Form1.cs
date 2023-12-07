@@ -6,20 +6,22 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;
 
 namespace muistipeli
 {
     public partial class Form1 : Form
     {
+        readonly SoundPlayer soundPlayer = new SoundPlayer();
         List<int> numbers = new List<int> { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 };
         string choice1;
         string choice2;
         int Tries;
-        List<PictureBox> pictures = new List<PictureBox>();
+        readonly List<PictureBox> pictures = new List<PictureBox>();
         PictureBox picA;
         PictureBox picB;
         int matches;
-        int timeTotal = 30;
+        readonly int timeTotal = 30;
         int countDown;
         bool gameOver = false;
 
@@ -34,7 +36,8 @@ namespace muistipeli
         private void TimerEvent(object sender, EventArgs e)
         {
             countDown--;
-            lblTime.Text = "Aikaa jäljellä: " + countDown;
+            progressBar1.Value = countDown;
+            lblTime.Text = "Aikaa jäljellä: " + countDown + " / 30s";
 
             if (countDown < 1)
             {
@@ -61,17 +64,19 @@ namespace muistipeli
 
         private void LoadPicture()
         {
-            int LeftPosition = 20;
-            int TopPosition = 20;
+            int LeftPosition = 155;
+            int TopPosition = 60;
             int rows = 0;
 
             for (int Size = 0; Size < 12; Size++)
             {
-                PictureBox NewPic = new PictureBox();
-                NewPic.Height = 50;
-                NewPic.Width = 50;
-                NewPic.SizeMode = PictureBoxSizeMode.StretchImage;
-                NewPic.BackColor = Color.LightSlateGray;
+                PictureBox NewPic = new PictureBox
+                {
+                    Height = 50,
+                    Width = 50,
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    BackColor = Color.LightSlateGray
+                };
                 NewPic.Click += NewPic_Click;
                 pictures.Add(NewPic);
 
@@ -80,16 +85,16 @@ namespace muistipeli
                     rows++;
                     NewPic.Left = LeftPosition;
                     NewPic.Top = TopPosition;
-                    this.Controls.Add(NewPic);
-                    LeftPosition = LeftPosition + 60;
+                    Controls.Add(NewPic);
+                    LeftPosition += 60;
 
                 }
 
                 if (rows == 3)
                 {
                     rows = 0;
-                    LeftPosition = 20;
-                    TopPosition = TopPosition + 60;
+                    LeftPosition = 155;
+                    TopPosition += 60;
 
                 }
             }
@@ -124,6 +129,8 @@ namespace muistipeli
             {
                 CheckPicture(picA, picB);
             }
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/cardFlip.wav";
+            soundPlayer.Play();
 
         }
 
@@ -139,7 +146,9 @@ namespace muistipeli
                 A.Tag = null;
                 B.Tag = null;
                 matches++;
-                lblMatch.Text = "Löydetyt parit: " + matches;
+                Tries++;
+                lblMatch.Text = "Löydetyt parit: " + matches + " / 6";
+                lblStatus.Text = "Käännetyt kortit: " + Tries;
             }
             else
             {
@@ -191,14 +200,14 @@ namespace muistipeli
 
             Tries = 0;
             lblStatus.Text = "Käännetyt kortit: " + Tries;
-            lblTime.Text = "Aikaa jäljellä: " + timeTotal;
-            lblMatch.Text = "Löydetyt parit: " + matches;
+            lblTime.Text = "Aikaa jäljellä: " + timeTotal + " / 30s";
+            lblMatch.Text = "Löydetyt parit: " + matches + " / 6";
             gameOver = false;
             GameTime.Start();
             countDown = timeTotal;
 
         }
-        private void btnStart_Click(object sender, EventArgs e)
+        private void BtnStart_Click(object sender, EventArgs e)
         {
             GameTime.Enabled = true;
 
@@ -209,7 +218,7 @@ namespace muistipeli
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "KeskitasonMuistipelinTulos.txt");
 
@@ -221,17 +230,18 @@ namespace muistipeli
             File.WriteAllText(filePath, resultData.ToString());
         }
 
-        private void btnDiff_Click(object sender, EventArgs e)
+        private void BtnDiff_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Form2 form2 = Application.OpenForms.OfType<Form2>().FirstOrDefault();
-
-            if (form2 == null)
-            {
-                form2 = new Form2();
-            }
+            Form2 form2 = Application.OpenForms.OfType<Form2>().FirstOrDefault() ?? new Form2();
             form2.Show();
+            btnStart.Enabled = true;
+            btnRestart.Enabled = false;
+            GameTime.Enabled = false;
+            btnSave.Enabled = false;
+            Tries = 0;
+            matches = 0;
         }
     }
 }
