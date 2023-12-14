@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.btnMed = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,11 +47,13 @@
             this.lblTime3 = new System.Windows.Forms.Label();
             this.lblMatch3 = new System.Windows.Forms.Label();
             this.Tulostaulu = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleGreen;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 20F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(40, 125);
@@ -59,10 +63,12 @@
             this.button1.Text = "Helppo";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.Button1_MouseHover);
             // 
             // btnMed
             // 
             this.btnMed.BackColor = System.Drawing.Color.LightYellow;
+            this.btnMed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMed.Font = new System.Drawing.Font("Bahnschrift Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMed.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMed.Location = new System.Drawing.Point(309, 125);
@@ -72,10 +78,12 @@
             this.btnMed.Text = "Keskitaso";
             this.btnMed.UseVisualStyleBackColor = false;
             this.btnMed.Click += new System.EventHandler(this.Button2_Click);
+            this.btnMed.MouseHover += new System.EventHandler(this.BtnMed_MouseHover);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightCoral;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Bahnschrift Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(570, 125);
             this.button3.Name = "button3";
@@ -84,6 +92,7 @@
             this.button3.Text = "Vaikea";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.button3.MouseHover += new System.EventHandler(this.Button3_MouseHover);
             // 
             // label2
             // 
@@ -263,6 +272,12 @@
             this.Tulostaulu.TabIndex = 38;
             this.Tulostaulu.Text = "Viimeisimmät tallenetut tulokset:";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 250;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,6 +301,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnMed);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(818, 682);
+            this.MinimumSize = new System.Drawing.Size(818, 682);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vaikeustaso";
@@ -313,5 +331,6 @@
         private System.Windows.Forms.Label lblTime3;
         private System.Windows.Forms.Label lblMatch3;
         private System.Windows.Forms.Label Tulostaulu;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

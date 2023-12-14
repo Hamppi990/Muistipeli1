@@ -21,3 +21,4 @@ C:\Users\joona\source\repos\Muistipeli-master\muistipeli\bin\Debug\muistipeli.pd
 C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Form2.resources
 C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Form3.resources
 C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Form4.resources
+C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Form5.resources

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.GameTime = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnDiff = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.btnRestart = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblMatch = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // GameTime
@@ -59,6 +61,8 @@
             // btnDiff
             // 
             this.btnDiff.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDiff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiff.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDiff.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiff.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnDiff.Location = new System.Drawing.Point(421, 466);
@@ -69,6 +73,7 @@
             this.btnDiff.Text = "Valitse vaikeustaso";
             this.btnDiff.UseVisualStyleBackColor = false;
             this.btnDiff.Click += new System.EventHandler(this.BtnDiff_Click);
+            this.btnDiff.MouseHover += new System.EventHandler(this.BtnDiff_MouseHover);
             // 
             // Vaikeustaso
             // 
@@ -86,6 +91,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Silver;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnSave.Location = new System.Drawing.Point(449, 404);
@@ -96,6 +102,7 @@
             this.btnSave.Text = "Tallenna tuloksesi";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            this.btnSave.MouseHover += new System.EventHandler(this.BtnSave_MouseHover);
             // 
             // lblStatus
             // 
@@ -113,6 +120,8 @@
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.Color.LightGreen;
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnStart.Font = new System.Drawing.Font("Bahnschrift Condensed", 20F, System.Drawing.FontStyle.Bold);
             this.btnStart.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnStart.Location = new System.Drawing.Point(248, 455);
@@ -123,10 +132,13 @@
             this.btnStart.Text = "Aloita";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.StartGameEvent);
+            this.btnStart.MouseHover += new System.EventHandler(this.BtnStart_MouseHover_1);
             // 
             // btnRestart
             // 
             this.btnRestart.BackColor = System.Drawing.Color.LightCoral;
+            this.btnRestart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRestart.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Bold);
             this.btnRestart.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnRestart.Location = new System.Drawing.Point(132, 479);
@@ -137,6 +149,7 @@
             this.btnRestart.Text = "Kokeile uudestaan";
             this.btnRestart.UseVisualStyleBackColor = false;
             this.btnRestart.Click += new System.EventHandler(this.RestartGameEvent);
+            this.btnRestart.MouseHover += new System.EventHandler(this.BtnRestart_MouseHover);
             // 
             // lblTime
             // 
@@ -164,11 +177,19 @@
             this.lblMatch.TabIndex = 33;
             this.lblMatch.Text = "Löydetyt parit:";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 250;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // Form3
             // 
+            this.AcceptButton = this.btnStart;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.CancelButton = this.btnDiff;
             this.ClientSize = new System.Drawing.Size(646, 546);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnDiff);
@@ -179,6 +200,10 @@
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblMatch);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(664, 593);
+            this.MinimumSize = new System.Drawing.Size(664, 593);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vaikea Muistipeli";
@@ -199,5 +224,6 @@
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblMatch;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

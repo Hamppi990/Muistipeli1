@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace muistipeli
 {
     public partial class Form2 : Form
     {
+        readonly SoundPlayer soundPlayer = new SoundPlayer();
 
         public Form2()
         {
@@ -70,6 +72,8 @@ namespace muistipeli
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
             this.Hide();
 
             Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault() ?? new Form1();
@@ -78,6 +82,8 @@ namespace muistipeli
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
             this.Hide();
 
             Form4 form4 = Application.OpenForms.OfType<Form4>().FirstOrDefault() ?? new Form4();
@@ -87,6 +93,8 @@ namespace muistipeli
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
             this.Hide();
 
             Form3 form3 = Application.OpenForms.OfType<Form3>().FirstOrDefault() ?? new Form3();
@@ -96,6 +104,21 @@ namespace muistipeli
         private void Vaikeustaso_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnMed_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina valitaksesi keskitason vaikeustason!", btnMed);
+        }
+
+        private void Button3_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina valitaksesi vaikean vaikeustason!", button3);
+        }
+
+        private void Button1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina valitaksesi helpon vaikeustason!", button1);
         }
     }
 }

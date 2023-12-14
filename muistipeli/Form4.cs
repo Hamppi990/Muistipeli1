@@ -59,6 +59,8 @@ namespace muistipeli
             btnSave.Enabled = false;
             Tries = 0;
             matches = 0;
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
         }
 
         private void LoadPicture()
@@ -184,6 +186,8 @@ namespace muistipeli
 
         private void StartGameEvent(object sender, EventArgs e)
         {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
             btnStart.Enabled = false;
             btnRestart.Enabled = true;
             matches = 0;
@@ -219,6 +223,8 @@ namespace muistipeli
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "HelponMuistipelinTulos.txt");
 
             StringBuilder resultData = new StringBuilder();
@@ -241,6 +247,28 @@ namespace muistipeli
             btnSave.Enabled = false;
             Tries = 0;
             matches = 0;
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+        }
+
+        private void BtnStart_MouseHover_1(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina aloittaaksesi!", btnStart);
+        }
+
+        private void BtnDiff_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina valitaksesi vaikeustason!", btnDiff);
+        }
+
+        private void BtnRestart_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina kokeillaksesi uudestaan!", btnRestart);
+        }
+
+        private void BtnSave_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina jos haluat tallentaa nykyisen tuloksen! Aikaisempi tulos korvaantuu uudella tuloksella! Löydät tallenetun tuloksen vaikeustaso valikosta tai omista tiedostoista!", btnSave);
         }
     }
 }
