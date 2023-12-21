@@ -296,5 +296,10 @@ namespace muistipeli
         {
             toolTip1.Show("Paina jos haluat tallentaa nykyisen tuloksen! Aikaisempi tulos korvaantuu uudella tuloksella! Löydät tallenetun tuloksen vaikeustaso valikosta tai omista tiedostoista!", btnSave);
         }
+
+        private void LblStatus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

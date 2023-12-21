@@ -46,52 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Keskitason Muistipeli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Keskitason Muistipeli.Designer.cs">
+      <DependentUpon>Keskitason Muistipeli.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Valitse vaikeustaso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Valitse vaikeustaso.Designer.cs">
+      <DependentUpon>Valitse vaikeustaso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Vaikea muistipeli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Vaikea muistipeli.Designer.cs">
+      <DependentUpon>Vaikea muistipeli.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="Helppo muistipeli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="Helppo muistipeli.Designer.cs">
+      <DependentUpon>Helppo muistipeli.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="Niilo22 Pelit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="Niilo22 Pelit.Designer.cs">
+      <DependentUpon>Niilo22 Pelit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanapeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanapeli.Designer.cs">
+      <DependentUpon>Sanapeli.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Keskitason Muistipeli.resx">
+      <DependentUpon>Keskitason Muistipeli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Valitse vaikeustaso.resx">
+      <DependentUpon>Valitse vaikeustaso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Vaikea muistipeli.resx">
+      <DependentUpon>Vaikea muistipeli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="Helppo muistipeli.resx">
+      <DependentUpon>Helppo muistipeli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="Niilo22 Pelit.resx">
+      <DependentUpon>Niilo22 Pelit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanapeli.resx">
+      <DependentUpon>Sanapeli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

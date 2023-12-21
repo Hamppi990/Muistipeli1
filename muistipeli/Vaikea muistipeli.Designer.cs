@@ -50,11 +50,12 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(30, 93);
+            this.progressBar1.Location = new System.Drawing.Point(22, 76);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progressBar1.Maximum = 30;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Size = new System.Drawing.Size(75, 19);
             this.progressBar1.TabIndex = 41;
             this.progressBar1.Value = 30;
             // 
@@ -65,10 +66,9 @@
             this.btnDiff.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDiff.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiff.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnDiff.Location = new System.Drawing.Point(421, 466);
-            this.btnDiff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDiff.Location = new System.Drawing.Point(316, 379);
             this.btnDiff.Name = "btnDiff";
-            this.btnDiff.Size = new System.Drawing.Size(167, 67);
+            this.btnDiff.Size = new System.Drawing.Size(125, 54);
             this.btnDiff.TabIndex = 40;
             this.btnDiff.Text = "Valitse vaikeustaso";
             this.btnDiff.UseVisualStyleBackColor = false;
@@ -81,10 +81,9 @@
             this.Vaikeustaso.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Vaikeustaso.Font = new System.Drawing.Font("Bahnschrift", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Vaikeustaso.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Vaikeustaso.Location = new System.Drawing.Point(215, 9);
-            this.Vaikeustaso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Vaikeustaso.Location = new System.Drawing.Point(161, 7);
             this.Vaikeustaso.Name = "Vaikeustaso";
-            this.Vaikeustaso.Size = new System.Drawing.Size(244, 37);
+            this.Vaikeustaso.Size = new System.Drawing.Size(194, 30);
             this.Vaikeustaso.TabIndex = 39;
             this.Vaikeustaso.Text = "Vaikea mustipeli";
             // 
@@ -94,10 +93,9 @@
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSave.Location = new System.Drawing.Point(449, 404);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(337, 328);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(108, 54);
+            this.btnSave.Size = new System.Drawing.Size(81, 44);
             this.btnSave.TabIndex = 38;
             this.btnSave.Text = "Tallenna tuloksesi";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -110,12 +108,12 @@
             this.lblStatus.BackColor = System.Drawing.SystemColors.Desktop;
             this.lblStatus.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblStatus.Location = new System.Drawing.Point(7, 362);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Location = new System.Drawing.Point(5, 294);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(120, 24);
+            this.lblStatus.Size = new System.Drawing.Size(98, 19);
             this.lblStatus.TabIndex = 37;
             this.lblStatus.Text = "Käännetyt kortit:";
+            this.lblStatus.Click += new System.EventHandler(this.LblStatus_Click);
             // 
             // btnStart
             // 
@@ -124,10 +122,9 @@
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnStart.Font = new System.Drawing.Font("Bahnschrift Condensed", 20F, System.Drawing.FontStyle.Bold);
             this.btnStart.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnStart.Location = new System.Drawing.Point(248, 455);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStart.Location = new System.Drawing.Point(186, 370);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(165, 78);
+            this.btnStart.Size = new System.Drawing.Size(124, 63);
             this.btnStart.TabIndex = 36;
             this.btnStart.Text = "Aloita";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -141,10 +138,9 @@
             this.btnRestart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRestart.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Bold);
             this.btnRestart.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnRestart.Location = new System.Drawing.Point(132, 479);
-            this.btnRestart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestart.Location = new System.Drawing.Point(99, 389);
             this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(108, 54);
+            this.btnRestart.Size = new System.Drawing.Size(81, 44);
             this.btnRestart.TabIndex = 35;
             this.btnRestart.Text = "Kokeile uudestaan";
             this.btnRestart.UseVisualStyleBackColor = false;
@@ -157,10 +153,9 @@
             this.lblTime.BackColor = System.Drawing.SystemColors.Desktop;
             this.lblTime.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTime.Location = new System.Drawing.Point(11, 56);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(8, 46);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(101, 24);
+            this.lblTime.Size = new System.Drawing.Size(83, 19);
             this.lblTime.TabIndex = 34;
             this.lblTime.Text = "Aikaa jäljellä:";
             // 
@@ -170,10 +165,9 @@
             this.lblMatch.BackColor = System.Drawing.SystemColors.Desktop;
             this.lblMatch.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMatch.Location = new System.Drawing.Point(7, 408);
-            this.lblMatch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMatch.Location = new System.Drawing.Point(5, 332);
             this.lblMatch.Name = "lblMatch";
-            this.lblMatch.Size = new System.Drawing.Size(105, 24);
+            this.lblMatch.Size = new System.Drawing.Size(84, 19);
             this.lblMatch.TabIndex = 33;
             this.lblMatch.Text = "Löydetyt parit:";
             // 
@@ -186,11 +180,11 @@
             // Form3
             // 
             this.AcceptButton = this.btnStart;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.CancelButton = this.btnDiff;
-            this.ClientSize = new System.Drawing.Size(646, 546);
+            this.ClientSize = new System.Drawing.Size(486, 450);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnDiff);
             this.Controls.Add(this.Vaikeustaso);
@@ -202,8 +196,9 @@
             this.Controls.Add(this.lblMatch);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(664, 593);
-            this.MinimumSize = new System.Drawing.Size(664, 593);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(502, 489);
+            this.MinimumSize = new System.Drawing.Size(502, 489);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vaikea Muistipeli";

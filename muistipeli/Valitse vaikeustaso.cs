@@ -120,5 +120,15 @@ namespace muistipeli
         {
             toolTip1.Show("Paina valitaksesi helpon vaikeustason!", button1);
         }
+
+        private void BtnDiff_Click(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            this.Hide();
+
+            Form5 form5 = Application.OpenForms.OfType<Form5>().FirstOrDefault() ?? new Form5();
+            form5.Show();
+        }
     }
 }
