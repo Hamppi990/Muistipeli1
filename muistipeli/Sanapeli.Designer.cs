@@ -35,12 +35,14 @@
             this.Word = new System.Windows.Forms.TextBox();
             this.BtnStart = new System.Windows.Forms.Button();
             this.BtnNext = new System.Windows.Forms.Button();
-            this.labelResult = new System.Windows.Forms.Label();
             this.labelScore = new System.Windows.Forms.Label();
             this.btnDiff = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbltime = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Header
@@ -48,8 +50,8 @@
             this.Header.AutoSize = true;
             this.Header.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Header.Font = new System.Drawing.Font("Bahnschrift", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Header.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Header.Location = new System.Drawing.Point(175, 58);
+            this.Header.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Header.Location = new System.Drawing.Point(176, 9);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(108, 30);
             this.Header.TabIndex = 22;
@@ -58,20 +60,22 @@
             // 
             // GuessLbl
             // 
-            this.GuessLbl.AutoSize = true;
-            this.GuessLbl.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.GuessLbl.Font = new System.Drawing.Font("Bahnschrift", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuessLbl.BackColor = System.Drawing.Color.Black;
+            this.GuessLbl.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.GuessLbl.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
             this.GuessLbl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.GuessLbl.Location = new System.Drawing.Point(139, 119);
+            this.GuessLbl.Location = new System.Drawing.Point(135, 180);
             this.GuessLbl.Name = "GuessLbl";
-            this.GuessLbl.Size = new System.Drawing.Size(181, 30);
+            this.GuessLbl.Size = new System.Drawing.Size(181, 34);
             this.GuessLbl.TabIndex = 23;
             this.GuessLbl.Text = "Arvattava sana";
+            this.GuessLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GuessLbl.Click += new System.EventHandler(this.GuessLbl_Click);
             // 
             // Word
             // 
             this.Word.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Word.Location = new System.Drawing.Point(95, 170);
+            this.Word.Location = new System.Drawing.Point(100, 235);
             this.Word.Name = "Word";
             this.Word.Size = new System.Drawing.Size(262, 36);
             this.Word.TabIndex = 24;
@@ -79,16 +83,16 @@
             // 
             // BtnStart
             // 
-            this.BtnStart.BackColor = System.Drawing.Color.PaleGreen;
+            this.BtnStart.BackColor = System.Drawing.Color.LightCoral;
             this.BtnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnStart.Font = new System.Drawing.Font("Bahnschrift Condensed", 20F, System.Drawing.FontStyle.Bold);
+            this.BtnStart.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.BtnStart.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnStart.Location = new System.Drawing.Point(159, 367);
+            this.BtnStart.Location = new System.Drawing.Point(337, 331);
             this.BtnStart.Margin = new System.Windows.Forms.Padding(2);
             this.BtnStart.Name = "BtnStart";
-            this.BtnStart.Size = new System.Drawing.Size(142, 72);
+            this.BtnStart.Size = new System.Drawing.Size(125, 45);
             this.BtnStart.TabIndex = 25;
-            this.BtnStart.Text = "Aloita";
+            this.BtnStart.Text = "Aloita uudestaan";
             this.BtnStart.UseVisualStyleBackColor = false;
             this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
@@ -98,7 +102,7 @@
             this.BtnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnNext.Font = new System.Drawing.Font("Bahnschrift Condensed", 20F, System.Drawing.FontStyle.Bold);
             this.BtnNext.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnNext.Location = new System.Drawing.Point(159, 253);
+            this.BtnNext.Location = new System.Drawing.Point(160, 363);
             this.BtnNext.Margin = new System.Windows.Forms.Padding(2);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(142, 72);
@@ -107,28 +111,16 @@
             this.BtnNext.UseVisualStyleBackColor = false;
             this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
-            // labelResult
-            // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.labelResult.Font = new System.Drawing.Font("Bahnschrift", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelResult.Location = new System.Drawing.Point(357, 58);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(0, 30);
-            this.labelResult.TabIndex = 27;
-            // 
             // labelScore
             // 
-            this.labelScore.AutoSize = true;
             this.labelScore.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelScore.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelScore.Location = new System.Drawing.Point(350, 9);
+            this.labelScore.Location = new System.Drawing.Point(12, 9);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(112, 29);
+            this.labelScore.Size = new System.Drawing.Size(123, 62);
             this.labelScore.TabIndex = 28;
-            this.labelScore.Text = "Pisteet: 0 / 0";
+            this.labelScore.Text = "Arvatut sanat: 0 / 0";
             this.labelScore.Click += new System.EventHandler(this.LabelScore_Click);
             // 
             // btnDiff
@@ -148,7 +140,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Silver;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -160,26 +152,56 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // label1
+            // timer1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(7, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 29);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Viimeisin tulos:";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.TimerEvent);
+            // 
+            // lbltime
+            // 
+            this.lbltime.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbltime.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbltime.Location = new System.Drawing.Point(12, 91);
+            this.lbltime.Name = "lbltime";
+            this.lbltime.Size = new System.Drawing.Size(136, 89);
+            this.lbltime.TabIndex = 32;
+            this.lbltime.Text = "Aikaa mennyt:";
+            // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.labelResult.Font = new System.Drawing.Font("Bahnschrift", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelResult.Location = new System.Drawing.Point(362, 123);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(0, 30);
+            this.labelResult.TabIndex = 27;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(12, 310);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 65);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Katso viimeisin tulos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Sanapeli
             // 
+            this.AcceptButton = this.BtnNext;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(474, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lbltime);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDiff);
             this.Controls.Add(this.labelScore);
@@ -207,11 +229,13 @@
         private System.Windows.Forms.TextBox Word;
         private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.Button BtnNext;
-        private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label labelScore;
         private System.Windows.Forms.Button btnDiff;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbltime;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Button button1;
     }
 }

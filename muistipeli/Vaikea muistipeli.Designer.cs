@@ -51,7 +51,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(22, 76);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar1.Maximum = 30;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -80,8 +80,8 @@
             this.Vaikeustaso.AutoSize = true;
             this.Vaikeustaso.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Vaikeustaso.Font = new System.Drawing.Font("Bahnschrift", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vaikeustaso.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Vaikeustaso.Location = new System.Drawing.Point(161, 7);
+            this.Vaikeustaso.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Vaikeustaso.Location = new System.Drawing.Point(147, 9);
             this.Vaikeustaso.Name = "Vaikeustaso";
             this.Vaikeustaso.Size = new System.Drawing.Size(194, 30);
             this.Vaikeustaso.TabIndex = 39;
@@ -196,7 +196,7 @@
             this.Controls.Add(this.lblMatch);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(502, 489);
             this.MinimumSize = new System.Drawing.Size(502, 489);
             this.Name = "Form3";
