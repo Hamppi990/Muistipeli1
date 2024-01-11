@@ -1,227 +1,336 @@
-<mxfile host="app.diagrams.net" modified="2023-11-23T12:04:42.156Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="pSKZaqfayld13OIJZnd8" version="22.1.3" type="device">
+<mxfile host="app.diagrams.net" modified="2024-01-11T12:10:35.654Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="dCXvX0H9tF5voG3yv24G" version="22.1.18" type="device">
   <diagram name="Sivu-1" id="blg8IRJWfw7xRQoUXau0">
-    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1259" dy="1831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-1" value="Aloita" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="160" width="120" height="80" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-1" value="Aloita" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="780" y="40" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-1">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-1" target="RdQ2x4YeOk4E74sTO1TI-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="410" as="sourcePoint" />
-            <mxPoint x="400" y="280" as="targetPoint" />
+            <mxPoint x="710" y="290" as="sourcePoint" />
+            <mxPoint x="720" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-4" value="Peli alkaa" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="280" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-4" value="Peli alkaa" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="780" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-5" value="Aika alkaa" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="280" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-5" value="Aika alkaa" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="940" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-6" value="Kuvat generoituvat&lt;br&gt;korttien taakse" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="280" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-6" value="Kuvat generoituvat&lt;br&gt;korttien taakse" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-4" target="RdQ2x4YeOk4E74sTO1TI-6">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-4" target="RdQ2x4YeOk4E74sTO1TI-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="240" as="sourcePoint" />
-            <mxPoint x="410" y="290" as="targetPoint" />
+            <mxPoint x="850" y="120" as="sourcePoint" />
+            <mxPoint x="850" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-5">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="310" as="sourcePoint" />
-            <mxPoint x="310" y="320" as="targetPoint" />
+            <mxPoint x="900" y="190" as="sourcePoint" />
+            <mxPoint x="750" y="200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-5">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="470" y="320" as="sourcePoint" />
-            <mxPoint x="560" y="400" as="targetPoint" />
+            <mxPoint x="910" y="200" as="sourcePoint" />
+            <mxPoint x="1000" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-10" value="Aikaa on 30 sec" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="400" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-10" value="Aikaa on 30 sec" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="940" y="280" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-11" value="Käyttäjä painaa &lt;br&gt;kortteja" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="360" width="140" height="80" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-11" value="Käyttäjä painaa &lt;br&gt;kortteja" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="240" width="140" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-6" target="RdQ2x4YeOk4E74sTO1TI-11">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-6" target="RdQ2x4YeOk4E74sTO1TI-11" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="240" as="sourcePoint" />
-            <mxPoint x="410" y="290" as="targetPoint" />
+            <mxPoint x="850" y="120" as="sourcePoint" />
+            <mxPoint x="850" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-10" target="RdQ2x4YeOk4E74sTO1TI-14">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-10" target="RdQ2x4YeOk4E74sTO1TI-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="350" as="sourcePoint" />
-            <mxPoint x="560" y="520" as="targetPoint" />
+            <mxPoint x="1010" y="230" as="sourcePoint" />
+            <mxPoint x="1000" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-14" value="Aika loppuu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="524.5" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-14" value="Aika loppuu" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="940" y="404.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-15" value="Peli päättyy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="640" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-15" value="Peli päättyy" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="940" y="520" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-14" target="RdQ2x4YeOk4E74sTO1TI-15">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-14" target="RdQ2x4YeOk4E74sTO1TI-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="470" as="sourcePoint" />
-            <mxPoint x="570" y="535" as="targetPoint" />
+            <mxPoint x="1010" y="350" as="sourcePoint" />
+            <mxPoint x="1010" y="415" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-18" value="Aloita alusta" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="490" y="720" width="140" height="80" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-18" value="Aloita alusta" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="930" y="600" width="140" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-15" target="RdQ2x4YeOk4E74sTO1TI-18">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-15" target="RdQ2x4YeOk4E74sTO1TI-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="595" as="sourcePoint" />
-            <mxPoint x="570" y="650" as="targetPoint" />
+            <mxPoint x="1010" y="475" as="sourcePoint" />
+            <mxPoint x="1010" y="530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-21" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-18">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-21" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="600" as="sourcePoint" />
-            <mxPoint x="680" y="760" as="targetPoint" />
+            <mxPoint x="820" y="480" as="sourcePoint" />
+            <mxPoint x="1120" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-1">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="680" y="200" as="sourcePoint" />
-            <mxPoint x="680" y="207.89473684210526" as="targetPoint" />
+            <mxPoint x="1120" y="80" as="sourcePoint" />
+            <mxPoint x="1000" y="87.89473684210526" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-23" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-23" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="680" y="760" as="sourcePoint" />
-            <mxPoint x="680" y="200" as="targetPoint" />
+            <mxPoint x="1120" y="640" as="sourcePoint" />
+            <mxPoint x="1120" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-25" value="Pelaaja ei löydä paria" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="470" width="80" height="40" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-25" value="Pelaaja ei löydä paria" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="350" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-27" value="Pelaaja löytää parin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="470" width="80" height="40" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-27" value="Pelaaja löytää parin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="350" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-28" value="Kortit kääntyy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="460" width="120" height="60" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-28" value="Kortit kääntyy" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="340" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-28" target="RdQ2x4YeOk4E74sTO1TI-27">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-28" target="RdQ2x4YeOk4E74sTO1TI-27" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="250" as="sourcePoint" />
-            <mxPoint x="410" y="290" as="targetPoint" />
+            <mxPoint x="850" y="130" as="sourcePoint" />
+            <mxPoint x="850" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-30" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-25">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-30" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-25" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="180" y="490" as="sourcePoint" />
-            <mxPoint x="330" y="500" as="targetPoint" />
+            <mxPoint x="620" y="370" as="sourcePoint" />
+            <mxPoint x="770" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-31" value="Käännetyt kortit ++" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="534.5" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-25" target="RdQ2x4YeOk4E74sTO1TI-31">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-25" target="RdQ2x4YeOk4E74sTO1TI-39" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="190" y="500" as="sourcePoint" />
-            <mxPoint x="170" y="500" as="targetPoint" />
+            <mxPoint x="630" y="380" as="sourcePoint" />
+            <mxPoint x="610" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-34" value="Löydetyt parit++" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="534.5" width="80" height="40" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-34" value="Löydetyt parit++" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="414.5" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-34">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-34" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="360" y="510" as="sourcePoint" />
-            <mxPoint x="410" y="500" as="targetPoint" />
+            <mxPoint x="800" y="390" as="sourcePoint" />
+            <mxPoint x="850" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-36" value="Korttien kuviot pysyvät" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="600" width="80" height="40" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-36" value="Korttien kuviot pysyvät" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="480" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-34" target="RdQ2x4YeOk4E74sTO1TI-36">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-34" target="RdQ2x4YeOk4E74sTO1TI-36" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="370" y="520" as="sourcePoint" />
-            <mxPoint x="370" y="545" as="targetPoint" />
+            <mxPoint x="810" y="400" as="sourcePoint" />
+            <mxPoint x="810" y="425" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-11" target="RdQ2x4YeOk4E74sTO1TI-28">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-11" target="RdQ2x4YeOk4E74sTO1TI-28" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="250" y="350" as="sourcePoint" />
-            <mxPoint x="250" y="370" as="targetPoint" />
+            <mxPoint x="690" y="230" as="sourcePoint" />
+            <mxPoint x="690" y="250" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-39" value="Kortit menevät takaisin piiloon" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="599.5" width="80" height="40" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-39" value="Kortit menevät takaisin piiloon" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="479.5" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-40" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-39">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-41" value="Pelaaja löysi kaikki parit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="560" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-42" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-41" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="574.5" as="sourcePoint" />
-            <mxPoint x="130" y="544.5" as="targetPoint" />
+            <mxPoint x="620" y="480" as="sourcePoint" />
+            <mxPoint x="690" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-41" value="Pelaaja löysi kaikki parit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="680" width="80" height="40" as="geometry" />
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-43" value="Käyttäjä ei löytänyt kaikkia pareja" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="560" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-42" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-41">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-44" value="Pelaaja voittaa pelin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="630" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-45" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-43" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="180" y="600" as="sourcePoint" />
-            <mxPoint x="250" y="470" as="targetPoint" />
+            <mxPoint x="740" y="480" as="sourcePoint" />
+            <mxPoint x="615" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-43" value="Käyttäjä ei löytänyt kaikkia pareja" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="680" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-44" value="Pelaaja voittaa pelin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="750" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-45" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-43">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-46" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-44" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="300" y="600" as="sourcePoint" />
-            <mxPoint x="175" y="690" as="targetPoint" />
+            <mxPoint x="720" y="659.7" as="sourcePoint" />
+            <mxPoint x="840" y="650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-46" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-44">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-47" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="779.7" as="sourcePoint" />
-            <mxPoint x="400" y="770" as="targetPoint" />
+            <mxPoint x="840" y="650" as="sourcePoint" />
+            <mxPoint x="840" y="550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-47" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-48" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="770" as="sourcePoint" />
-            <mxPoint x="400" y="670" as="targetPoint" />
+            <mxPoint x="840" y="550" as="sourcePoint" />
+            <mxPoint x="570" y="490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-48" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-15">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-41" target="RdQ2x4YeOk4E74sTO1TI-44" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="670" as="sourcePoint" />
-            <mxPoint x="130" y="610" as="targetPoint" />
+            <mxPoint x="570" y="464.5" as="sourcePoint" />
+            <mxPoint x="570" y="490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RdQ2x4YeOk4E74sTO1TI-41" target="RdQ2x4YeOk4E74sTO1TI-44">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-50" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-43" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="130" y="584.5" as="sourcePoint" />
-            <mxPoint x="130" y="610" as="targetPoint" />
+            <mxPoint x="760" y="650" as="sourcePoint" />
+            <mxPoint x="850" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-50" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-43">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-51" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="320" y="770" as="sourcePoint" />
-            <mxPoint x="410" y="680" as="targetPoint" />
+            <mxPoint x="620" y="479.5" as="sourcePoint" />
+            <mxPoint x="740" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-51" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-52" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RdQ2x4YeOk4E74sTO1TI-31" target="RdQ2x4YeOk4E74sTO1TI-28" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="180" y="599.5" as="sourcePoint" />
-            <mxPoint x="300" y="600" as="targetPoint" />
+            <mxPoint x="679.76" y="479.5" as="sourcePoint" />
+            <mxPoint x="679.76" y="429.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RdQ2x4YeOk4E74sTO1TI-52" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="RdQ2x4YeOk4E74sTO1TI-28">
+        <mxCell id="TC17rRujDP-4hTcENaMx-3" value="Käyttäjä voi valita&lt;br&gt;&amp;nbsp;muistipelin tai sananpelin" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="15" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-4" value="Päävalikko" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="-90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="TC17rRujDP-4hTcENaMx-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="239.76" y="599.5" as="sourcePoint" />
-            <mxPoint x="239.76" y="549.5" as="targetPoint" />
+            <mxPoint x="510" y="74.58" as="sourcePoint" />
+            <mxPoint x="600" y="80" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-6" value="Muistipeli" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="530" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-7" value="Sanapeli" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="TC17rRujDP-4hTcENaMx-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="90" as="sourcePoint" />
+            <mxPoint x="140" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="TC17rRujDP-4hTcENaMx-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="399.6" y="-10" as="sourcePoint" />
+            <mxPoint x="399.6" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-11" value="Peli alkaa" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-12" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="RdQ2x4YeOk4E74sTO1TI-31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="679.76" y="479.5" as="sourcePoint" />
+            <mxPoint x="680" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RdQ2x4YeOk4E74sTO1TI-31" value="Käännetyt kortit ++" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="414.5" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-14" value="Käyttäjä voi tallentaa tuloksen" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="670" as="sourcePoint" />
+            <mxPoint x="600" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-16" value="Käyttäjä valitsee vaikeustason" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="80" as="sourcePoint" />
+            <mxPoint x="780" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-19" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="120" as="sourcePoint" />
+            <mxPoint x="660" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-20" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="140" as="sourcePoint" />
+            <mxPoint x="660" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-22" value="Vaikea vaikeustaso" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="540" y="110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="TC17rRujDP-4hTcENaMx-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="160" as="targetPoint" />
+            <mxPoint x="530" y="140" as="sourcePoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="TC17rRujDP-4hTcENaMx-23" target="RdQ2x4YeOk4E74sTO1TI-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-23" value="Mukana on myös yksi &quot;Pommi pari&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="165" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="TC17rRujDP-4hTcENaMx-32" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="110" as="sourcePoint" />
+            <mxPoint x="-40" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="TC17rRujDP-4hTcENaMx-32" target="TC17rRujDP-4hTcENaMx-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-32" value="Peli alkaa" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-33" value="Aika alkaa" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="TC17rRujDP-4hTcENaMx-33" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="180" as="sourcePoint" />
+            <mxPoint x="-10" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="TC17rRujDP-4hTcENaMx-35" target="TC17rRujDP-4hTcENaMx-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-35" value="Ruudulla näkyy arvattava sana satunnaisessa järjestyksessä" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TC17rRujDP-4hTcENaMx-37" value="Koodi poistaa sanasta kolme satunnaista kirjainta" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="344.5" width="120" height="65.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
