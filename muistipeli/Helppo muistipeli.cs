@@ -167,11 +167,9 @@ namespace muistipeli
                 }
             }
 
-            if (pictures.All(o => o.Tag == pictures[0].Tag))
+            if (pictures.All(p => p.Tag == null))
             {
                 GameOver("Löysit kaikki parit! Hienoa!");
-
-
             }
 
         }

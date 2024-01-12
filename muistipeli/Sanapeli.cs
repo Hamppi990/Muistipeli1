@@ -18,22 +18,15 @@ namespace muistipeli
         {
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SanapelinTulos.txt");
             InitializeComponent();
+            BtnStart.Enabled = false;
             BtnNext.Enabled = true;
             btnSave.Enabled = false;
             words = words.OrderBy(x => random.Next()).ToArray();
             labelScore.Text = "Arvatut sanat: 0 / 15";
             ShowWord();
-            if (index == 14)
-            {
-                BtnStart.Enabled = true;
-            }
             if (index == 0)
             {
                 timer1.Start();
-            }
-            else
-            {
-                BtnStart.Enabled = false;
             }
         }
 
@@ -63,31 +56,32 @@ namespace muistipeli
                 BtnStart.Enabled = true;
                 btnSave.Enabled = true;
             }
-
+            if (round == 15)
+            {
+                timer1.Stop();
+            }
             Word.Text = "";
             Word.Focus();
-            soundPlayer.SoundLocation = "Sound/Click.wav";
             soundPlayer.Play();
             labelScore.Text = "Arvatut sanat: " + score + " / 15";
+            label1.Text = "Sana: " + round + " / 15";
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-
             BtnStart.Enabled = false;
-            labelResult.Text = "";
             BtnNext.Enabled = true;
+            labelResult.Text = "";
             score = 0;
             soundPlayer.SoundLocation = "Sound/Click.wav";
             soundPlayer.Play();
             round =0;
             index = 0;
             ShowWord();
-            timer1.Stop();
             countUp = 0;
             lbltime.Text = "Aikaa mennyt: 0s";
-            //timer1.Start();
-
+            timer1.Start();
+            btnSave.Enabled = false;
         }
 
             private void Word_TextChanged(object sender, EventArgs e)
@@ -116,11 +110,13 @@ namespace muistipeli
                 labelResult.Text = "Oikein";
                 labelResult.BackColor = Color.Green;
                 score++;
+                soundPlayer.SoundLocation = "Sound/Correct.wav";
             }
             else
             {
                 labelResult.Text = "Väärin";
                 labelResult.BackColor = Color.Red;
+                soundPlayer.SoundLocation = "Sound/Incorrect.wav";
             }
         }
 
@@ -204,5 +200,25 @@ namespace muistipeli
             }
         }
 
+        private void BtnNext_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina siirtyäksesi seuraavaan sanaaan!", BtnNext);
+
+        }
+
+        private void BtnStart_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina kokeillaksesi uudestaan!", BtnStart);
+        }
+
+        private void Button1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina jos haluat katsoa viimeisimmän tuloksen!", button1);
+        }
+
+        private void BtnSave_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Paina jos haluat tallentaa nykyisen tuloksen! Aikaisempi tulos korvaantuu uudella tuloksella!", btnSave);
+        }
     }
 }

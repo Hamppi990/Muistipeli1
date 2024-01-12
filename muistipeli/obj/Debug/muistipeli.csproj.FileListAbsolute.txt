@@ -37,3 +37,4 @@ C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.exe
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.pdb
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
+C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
