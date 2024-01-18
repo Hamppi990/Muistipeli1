@@ -138,44 +138,253 @@ Sanojen piilotus. Koodi poistaa sanasta kolme satunnaista kirjainta ja lisää n
  }
 ```
 Sanojen tarkastus koodi. Koodi tarkastaa onko pelaajan syöttämä sama kuin ruudulla oleva sana. Jos sana on sama, niin ruudulla näkyy teksti "Oikein" ja pelaaja saa yhden pisteen. Jos sana on eri, niin ruudulla näkyy teksti "Väärin" ja pelaaja ei saa pistettä.
-
-![sanojen tarkastus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/56542e0b-b3db-44d8-9830-b68ff25a3e00)
-
+``` C#
+public void CheckWord()
+{
+    if(Word.Text.Equals(words[index]))
+    {
+        labelResult.Text = "Oikein";
+        labelResult.BackColor = Color.Green;
+        score++;
+        soundPlayer.SoundLocation = "Sound/Correct.wav";
+    }
+    else
+    {
+        labelResult.Text = "Väärin";
+        labelResult.BackColor = Color.Red;
+        soundPlayer.SoundLocation = "Sound/Incorrect.wav";
+    }
+}
+```
 Tuloksen lukeminen tiedostosta. Pelin loputtua pelaaja voi lukea tuloksensa muistiosta, joka avautuu kun painaa "Katso viimeisin tulos" painiketta.
+``` C#
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SanapelinTulos.txt");
 
-![tallennusSanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/11a688e8-3f5a-4fcb-90de-a5b3ff571cf8)
-
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    Process.Start("notepad.exe", filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tiedoston avaaminen epäonnistui: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tiedostoa ei löydy.");
+            }
+        }
+```
 Ajanotto koodi. Koodi lisää "countUp" arvoon joka sekunti yhden pisteen. Ruudulla näkyy tulos alussa sekunteina ja kun pisteitä on yli 60, ruudulla näkyy aika minuutteina ja sekunteina.
+``` C#
+        private void TimerEvent(object sender, EventArgs e)
+        {
+            countUp++;
 
-![ajanotto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/539af7b6-e1b0-44e6-a16e-fc3bb5b96ca7)
-
+            int minutes = countUp / 60;
+            int seconds = countUp % 60;
+            if (countUp >= 60)
+            {
+                lbltime.Text = "Aikaa mennyt: " + minutes + "m " + seconds + "s";
+            }
+            else
+            {
+                lbltime.Text = "Aikaa mennyt: " + seconds + "s";
+            }
+        }
+```
 ### Muistipeli
 
 Pelin aloitus koodi. Koodi joka kierroksen alussa resetoi kuvien ominaisuudet ja tekee kuvien sijainnista satunnaisen joka kerta kun pelin aloittaa uudelleen. Koodi myös resetoi tuloksen ja aloittaa ajan.
+``` C#
+        private void StartGameEvent(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            btnStart.Enabled = false;
+            btnRestart.Enabled = true;
+            matches = 0;
+            var randomList = numbers.OrderBy(x => Guid.NewGuid()).ToList();
 
-![Näyttökuva 2024-01-18 170044](https://github.com/Hamppi990/Muistipeli1/assets/87445182/c1463a13-c128-4bc9-ae8f-2666c2e12cea)
+            numbers = randomList;
 
+            for (int i = 0; i < pictures.Count; i++)
+            {
+                pictures[i].Image = null;
+                pictures[i].Tag = numbers[i].ToString();
+            }
+
+            Tries = 0;
+            lblStatus.Text = "Käännetyt kortit: " + Tries;
+            lblTime.Text = "Aikaa jäljellä: " + timeTotal + " / 30s";
+            lblMatch.Text = "Löydetyt parit: " + matches + " / 6";
+            gameOver = false;
+            GameTime.Start();
+            countDown = timeTotal;
+
+        }
+```
 Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuvat tulevat.
+``` C#
+        private void LoadPicture()
+        {
+            int LeftPosition = 155;
+            int TopPosition = 60;
+            int rows = 0;
 
-![Näyttökuva 2024-01-18 164352](https://github.com/Hamppi990/Muistipeli1/assets/87445182/653cfa97-0f63-4d24-b5ab-b8662ef75220)
+            for (int Size = 0; Size < 12; Size++)
+            {
+                PictureBox NewPic = new PictureBox
+                {
+                    Height = 50,
+                    Width = 50,
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    BackColor = Color.LightSlateGray
+                };
+                NewPic.Click += NewPic_Click;
+                pictures.Add(NewPic);
 
+                if (rows < 3)
+                {
+                    rows++;
+                    NewPic.Left = LeftPosition;
+                    NewPic.Top = TopPosition;
+                    Controls.Add(NewPic);
+                    LeftPosition += 60;
+
+                }
+
+                if (rows == 3)
+                {
+                    rows = 0;
+                    LeftPosition = 155;
+                    TopPosition += 60;
+
+                }
+            }
+            RestartGame();
+        }
+```
 Aikaraja koodi. Koodi miinustaa "countDown" arvosta joka sekunti yhden pisteen. Yhteensä aikaa on 30 sekuntia jokaisessa muistipelissä. Jos aika loppuu ennen kuin pelaaja on löytänyt kaikki parit, pelaaja häviää pelin. Koodi näyttää jäljellä olevat kortit pelaajalle.
+``` C#
+        private void TimerEvent(object sender, EventArgs e)
+        {
+            countDown--;
+            progressBar1.Value = countDown;
+            lblTime.Text = "Aikaa jäljellä: " + countDown + " / 30s";
+
+            if (countDown < 1)
+            {
+                GameOver("Aika loppui, hävisit pelin :( ");
+
+                foreach (PictureBox x in pictures)
+                    if (x.Tag != null)
+                    {
+                        x.Image = Image.FromFile("pics/" + (string)x.Tag + ".png");
+                    }
+            }
+
+        }
+```
+
+Korttien kääntämis koodi.
+``` C#
+        private void NewPic_Click(object sender, EventArgs e)
+        {
+            if (gameOver || btnRestart.Enabled == false)
+            {
+                return;
+            }
+            if (choice1 == null)
+            {
+                picA = sender as PictureBox;
+                if (picA.Tag != null && picA.Image == null)
+                {
+                    picA.Image = Image.FromFile("pics/" + (string)picA.Tag + ".png");
+                    choice1 = (string)picA.Tag;
+                }
+            }
+            else if (choice2 == null)
+            {
+                picB = sender as PictureBox;
+                if (picB.Tag != null && picB.Image == null)
+                {
+                    picB.Image = Image.FromFile("pics/" + (string)picB.Tag + ".png");
+                    choice2 = (string)picB.Tag;
+                }
+            }
+            else
+            {
+                CheckPicture(picA, picB);
+            }
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/cardFlip.wav";
+            soundPlayer.Play();
+
+```
 
 
-![Näyttökuva 2024-01-18 170837](https://github.com/Hamppi990/Muistipeli1/assets/87445182/d0a646dc-879c-448c-ab01-c2d17ca0afb6)
+Korttien tarkastaminen.
+``` C#
+        private void CheckPicture(PictureBox A, PictureBox B)
+        {
+            if (choice1 == choice2)
+            {
+                A.Tag = null;
+                B.Tag = null;
+                matches++;
+                Tries++;
+                lblMatch.Text = "Löydetyt parit: " + matches + " / 6";
+                lblStatus.Text = "Käännetyt kortit: " + Tries;
+            }
+            else
+            {
+                Tries++;
+                lblStatus.Text = "Käännetyt kortit: " + Tries;
+            }
+
+            choice1 = null;
+            choice2 = null;
+            foreach (PictureBox pics in pictures.ToList())
+            {
+                if (pics.Tag != null)
+                {
+                    pics.Image = null;
+                }
+            }
+
+            if (pictures.All(o => o.Tag == pictures[0].Tag))
+            {
+                GameOver("Löysit kaikki parit! Hienoa!");
 
 
+            }
 
-![Näyttökuva 2024-01-18 164342](https://github.com/Hamppi990/Muistipeli1/assets/87445182/1f26b4a3-c8fe-4b34-bb2b-345ac1dc3922)
+        }
+```
 
+**Vaikeassa muistipelissä:**
 
+Pommin tarkastus koodi. Koodi tarkastaa onko pelaaja yhdistänyt "pommiparin", jos on niin peli päättyy.
+``` C#
+if (choice1 == "9" && choice2 == "9")
+{
 
-![Näyttökuva 2024-01-18 164250](https://github.com/Hamppi990/Muistipeli1/assets/87445182/bcebb6a1-836b-492a-8b8c-ddd472208c2c)
+    foreach (PictureBox x in pictures)
+        if (x.Tag != null)
+        {
+            x.Image = Image.FromFile("pics/" + (string)x.Tag + ".png");
+        }
+    soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/bomb.wav";
+    soundPlayer.Play();
+    GameOver1("Peli päättyi, koska yhdistit pommit! ");
+    return;
 
-Vaikeassa muistipelissä:
-
-![Näyttökuva 2024-01-18 173547](https://github.com/Hamppi990/Muistipeli1/assets/87445182/785b3f21-dae3-4769-adef-a7ac658362e7)
-
+}
+```
 ## Jatkokehitysideat
 - Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
 - Korttien kääntämisen voisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
