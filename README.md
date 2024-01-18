@@ -90,7 +90,7 @@ Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuot
             form2.Show();
         }
 ```
-Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
+Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon painamalla "Tallenna tuloksesi" nappia. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
 ``` C#
         private void BtnSave_Click(object sender, EventArgs e)
         {
