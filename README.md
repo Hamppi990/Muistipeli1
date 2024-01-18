@@ -76,11 +76,17 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 
 
 ## Koodin esittely
+### Yleinen
 
 Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi myös toistaa äänen kun nappia painaa.
 
 ![PäävalikkoKoodi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/da278d0e-96b3-407a-b19b-3fe6313ad8bb)
 
+Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
+
+![tallennus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/77736927-79a4-465b-8b4b-e83aa54a2811)
+
+### Sanapeli
 Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. (Rivi 33-35) Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta kun pelin käynnistää uudelleen. (Rivi 24 ja 40).
 
 ![sanalista](https://github.com/Hamppi990/Muistipeli1/assets/87445182/20909026-a8ca-418a-842f-f6ff743e9ffa)
@@ -93,17 +99,15 @@ Sanojen tarkastus koodi. Koodi tarkastaa onko pelaajan syöttämä sama kuin ruu
 
 ![sanojen tarkastus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/56542e0b-b3db-44d8-9830-b68ff25a3e00)
 
-Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja kuluneen ajan.
+Tuloksen lukeminen tiedostosta. Pelin loputtua pelaaja voi lukea tuloksensa muistiosta, joka avautuu kun painaa "Katso viimeisin tulos" painiketta.
 
 ![tallennusSanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/11a688e8-3f5a-4fcb-90de-a5b3ff571cf8)
 
 
-
 ![ajanotto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/539af7b6-e1b0-44e6-a16e-fc3bb5b96ca7)
 
-![tallennus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/77736927-79a4-465b-8b4b-e83aa54a2811)
 
 ## Jatkokehitysideat
-- Muutaman löydetyn bugin korjaus esimerkiksi välillä muistipelin kortit eivät käänny.
+- Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
 - Korttien kääntämisen tulisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
-- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli ei tarvitsisi poistua sovelluksesta.
+- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli pelaajan ei tarvitsisi poistua sovelluksesta.
