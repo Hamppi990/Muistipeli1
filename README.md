@@ -40,7 +40,7 @@ Tältä näyttää kun pelaaja valitsee päävalikosta sanapelin ja peli on käy
 ![sanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/e315c7be-bd84-49b7-9200-15c79c864f1e)
 
 Tältä näyttää kun sanapelin kaikki sanat on käyty läpi ja peli on ohi.
-Pelin voi tässä vaiheessa tallentaa tai aloittaa alusta.
+Pelin tuloksen voi tässä vaiheessa tallentaa tai pelin voi aloittaa alusta.
 
 ![sanapelivoitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/3a8ae0ce-ede4-4ee0-a0b6-8a067adcad57)
 
