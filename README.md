@@ -87,6 +87,7 @@ Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksen
 ![tallennus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/77736927-79a4-465b-8b4b-e83aa54a2811)
 
 ### Sanapeli
+
 Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. (Rivi 33-35) Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta kun pelin käynnistää uudelleen. (Rivi 24 ja 40).
 
 ![sanalista](https://github.com/Hamppi990/Muistipeli1/assets/87445182/20909026-a8ca-418a-842f-f6ff743e9ffa)
@@ -108,10 +109,23 @@ Ajanotto koodi. Koodi lisää "countUp" arvoon joka sekunti yhden pisteen. Ruudu
 ![ajanotto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/539af7b6-e1b0-44e6-a16e-fc3bb5b96ca7)
 
 ### Muistipeli
-![Näyttökuva 2024-01-18 164250](https://github.com/Hamppi990/Muistipeli1/assets/87445182/bcebb6a1-836b-492a-8b8c-ddd472208c2c)
+
+Pelin aloitus koodi.
+
+![Näyttökuva 2024-01-18 170044](https://github.com/Hamppi990/Muistipeli1/assets/87445182/c1463a13-c128-4bc9-ae8f-2666c2e12cea)
+
+Kuvien lataaminen 
+
+![Näyttökuva 2024-01-18 164352](https://github.com/Hamppi990/Muistipeli1/assets/87445182/653cfa97-0f63-4d24-b5ab-b8662ef75220)
+
+
 
 ![Näyttökuva 2024-01-18 164342](https://github.com/Hamppi990/Muistipeli1/assets/87445182/1f26b4a3-c8fe-4b34-bb2b-345ac1dc3922)
-![Näyttökuva 2024-01-18 164352](https://github.com/Hamppi990/Muistipeli1/assets/87445182/653cfa97-0f63-4d24-b5ab-b8662ef75220)
+
+
+
+![Näyttökuva 2024-01-18 164250](https://github.com/Hamppi990/Muistipeli1/assets/87445182/bcebb6a1-836b-492a-8b8c-ddd472208c2c)
+
 
 ## Jatkokehitysideat
 - Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
