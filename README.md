@@ -45,7 +45,7 @@ Pelin tuloksen voi tässä vaiheessa tallentaa tai pelin voi aloittaa alusta.
 ![sanapelivoitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/3a8ae0ce-ede4-4ee0-a0b6-8a067adcad57)
 
 Tältä näyttää kun pelaaja valitsee päävalikosta muistipelin. Tässä valikossa voi valita muistipelissä olevan vaikeustason.
-Helpossa vaikeustasossa on 2x5 ruudukko. Keksitasossa on 3x4 ruudukko. Vaikeassa vaikeustasossa on 4x4 ruudukko ja mukana on myös "pommi pari" minkä yhdistäessä, lopettaa pelin välittömästi.
+Helpossa vaikeustasossa on 2x5 ruudukko. Keksitasossa on 3x4 ruudukko. Vaikeassa vaikeustasossa on 4x4 ruudukko ja mukana on myös "pommi pari" minkä yhdistäessä, peli loppuu välittömästi.
 
 ![vaikeus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/cb5a69e7-0d62-46a1-8826-8a752a4a16cd)
 
