@@ -45,11 +45,11 @@ Pelin voi tässä vaiheessa tallentaa tai aloittaa alusta.
 ![sanapelivoitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/3a8ae0ce-ede4-4ee0-a0b6-8a067adcad57)
 
 Tältä näyttää kun pelaaja valitsee päävalikosta muistipelin. Tässä valikossa voi valita muistipelissä olevan vaikeustason.
-Helpossa vaikeustasossa on 5x2 ruudukko. Keksitasossa on 3x4 ruudukko. Vaikeassa vaikeustasossa on 4x4 ruudukko ja mukana on myös "pommi pari" minkä yhdistäessä, lopettaa pelin välittömästi.
+Helpossa vaikeustasossa on 2x5 ruudukko. Keksitasossa on 3x4 ruudukko. Vaikeassa vaikeustasossa on 4x4 ruudukko ja mukana on myös "pommi pari" minkä yhdistäessä, lopettaa pelin välittömästi.
 
 ![vaikeus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/cb5a69e7-0d62-46a1-8826-8a752a4a16cd)
 
-Tältä näyttää kun valitsee vaikeustasovalikosta helpon vaikeustason ja peli on käynnissä.
+Tältä näyttää kun valitsee vaikeustasovalikosta helpon vaikeustason ja peli on käynnissä. 2x5 ruudukko.
 
 ![helppo](https://github.com/Hamppi990/Muistipeli1/assets/87445182/9585248a-2a63-44ba-b31c-fca05c7d6d93)
 
@@ -57,7 +57,7 @@ Tältä näyttää kun häviää minkä tahansa muistipelin. Pelin voi tässä v
 
 ![häviö](https://github.com/Hamppi990/Muistipeli1/assets/87445182/12db1eff-65b7-468e-bf36-1acfddea6363)
 
-Tältä näyttää kun valitsee vaikeustasovalikosta keskitason vaikeustason ja peli on käynnissä.
+Tältä näyttää kun valitsee vaikeustasovalikosta keskitason vaikeustason ja peli on käynnissä. 3x4 ruudukko.
 
 ![keskitaso](https://github.com/Hamppi990/Muistipeli1/assets/87445182/195dc649-16d0-4c5a-b389-1dc6b7a24ae8)
 
@@ -65,15 +65,13 @@ Tältä näyttää kun voittaa minkä tahansa muistipelin. Pelin voi tässä vai
 
 ![voitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/17e27296-479c-4c91-aae8-91cbb0328c77)
 
-
+Tältä näyttää kun valitsee vaikeustasovalikosta vaikean vaikeustason ja peli on käynnissä. 4x4 ruudukko.
 
 ![vaikea](https://github.com/Hamppi990/Muistipeli1/assets/87445182/59c816ca-4f07-4979-ade6-0909738d1396)
 
-
+Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli loppuu ja sen voi aloittaa sitten alusta.
 
 ![pommi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/32f409b2-38b7-4fe3-9bae-1f420f48a1fb)
-
-
 
 
 ## Koodin esittely
