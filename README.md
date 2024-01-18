@@ -12,7 +12,7 @@ Jos ei, kortit käännetään takaisin kuvapuoli alaspäin.
 Pelaajan tavoitteena on löytää kaikki kuvaparit mahdollisimman vähillä yrityksillä ja aikaa käyttäen.
 ### Voittaminen
 Peli päättyy, kun kaikki kuvaparit on löydetty.
-Lisätavoiteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimalla ajalla.
+Lisätavoitteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimmalla ajalla.
 Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
 
 ## Sanapelissä:
@@ -110,13 +110,17 @@ Ajanotto koodi. Koodi lisää "countUp" arvoon joka sekunti yhden pisteen. Ruudu
 
 ### Muistipeli
 
-Pelin aloitus koodi.
+Pelin aloitus koodi. Koodi joka kierroksen alussa resetoi kuvien ominaisuudet ja tekee kuvien sijainnista satunnaisen joka kerta kun pelin aloittaa uudelleen. Koodi myös resetoi tuloksen ja aloittaa ajan.
 
 ![Näyttökuva 2024-01-18 170044](https://github.com/Hamppi990/Muistipeli1/assets/87445182/c1463a13-c128-4bc9-ae8f-2666c2e12cea)
 
-Kuvien lataaminen 
+Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuvat tulevat.
 
 ![Näyttökuva 2024-01-18 164352](https://github.com/Hamppi990/Muistipeli1/assets/87445182/653cfa97-0f63-4d24-b5ab-b8662ef75220)
+
+
+
+![Näyttökuva 2024-01-18 170837](https://github.com/Hamppi990/Muistipeli1/assets/87445182/d0a646dc-879c-448c-ab01-c2d17ca0afb6)
 
 
 
