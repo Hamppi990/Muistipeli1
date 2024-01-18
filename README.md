@@ -53,7 +53,7 @@ Tältä näyttää kun valitsee vaikeustasovalikosta helpon vaikeustason ja peli
 
 ![helppo](https://github.com/Hamppi990/Muistipeli1/assets/87445182/9585248a-2a63-44ba-b31c-fca05c7d6d93)
 
-Tältä näyttää kun häviää minkä tahansa muistipelin. Pelin voi tässä vaiheessa tallentaa tai aloittaa alusta.
+Tältä näyttää kun häviää minkä tahansa muistipelin. Pelin tuloksen voi tässä vaiheessa tallentaa tai pelin voi aloittaa alusta.
 
 ![häviö](https://github.com/Hamppi990/Muistipeli1/assets/87445182/12db1eff-65b7-468e-bf36-1acfddea6363)
 
@@ -61,7 +61,7 @@ Tältä näyttää kun valitsee vaikeustasovalikosta keskitason vaikeustason ja 
 
 ![keskitaso](https://github.com/Hamppi990/Muistipeli1/assets/87445182/195dc649-16d0-4c5a-b389-1dc6b7a24ae8)
 
-Tältä näyttää kun voittaa minkä tahansa muistipelin. Pelin voi tässä vaiheessa tallentaa tai aloittaa alusta.
+Tältä näyttää kun voittaa minkä tahansa muistipelin. Pelin tuloksen voi tässä vaiheessa tallentaa tai pelin voi aloittaa alusta.
 
 ![voitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/17e27296-479c-4c91-aae8-91cbb0328c77)
 
