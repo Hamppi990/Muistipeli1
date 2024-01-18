@@ -85,7 +85,7 @@
             this.Vaikeustaso.Name = "Vaikeustaso";
             this.Vaikeustaso.Size = new System.Drawing.Size(194, 30);
             this.Vaikeustaso.TabIndex = 39;
-            this.Vaikeustaso.Text = "Vaikea mustipeli";
+            this.Vaikeustaso.Text = "Vaikea muistipeli";
             // 
             // btnSave
             // 

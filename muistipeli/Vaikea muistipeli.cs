@@ -206,7 +206,7 @@ namespace muistipeli
         {
             GameTime.Stop();
             gameOver = true;
-            MessageBox.Show(msg + " Voit kokeilla peliä uudestaan tai tallentaa tuloksen.");
+            MessageBox.Show(msg + " Voit kokeilla peliä uudestaan.");
             btnSave.Enabled = false;
         }
 

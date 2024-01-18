@@ -25,7 +25,6 @@ C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Fo
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\bin\Debug\muistipeli.exe.config
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\bin\Debug\muistipeli.exe
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\bin\Debug\muistipeli.pdb
-C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.csprojAssemblyReference.cache
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.Form1.resources
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.Form2.resources
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.Form3.resources
@@ -38,3 +37,4 @@ C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.pdb
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
 C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
+C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.csprojAssemblyReference.cache
