@@ -79,7 +79,7 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 ### Yleinen
 
 Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi siis avaa uuden formsin ja piilottaa nykyisen.
-
+``` C#
         private void Button1_Click(object sender, EventArgs e)
         {
             soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
@@ -89,8 +89,7 @@ Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuot
             Form2 form2 = Application.OpenForms.OfType<Form2>().FirstOrDefault() ?? new Form2();
             form2.Show();
         }
-
-
+```
 Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
 
 ![tallennus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/77736927-79a4-465b-8b4b-e83aa54a2811)
