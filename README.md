@@ -77,6 +77,18 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 
 ## Koodin esittely
 
+![PäävalikkoKoodi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/da278d0e-96b3-407a-b19b-3fe6313ad8bb)
+![sanalista](https://github.com/Hamppi990/Muistipeli1/assets/87445182/20909026-a8ca-418a-842f-f6ff743e9ffa)
+![sanojenpiilotus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/22692f10-fad1-4ebb-bd43-963eb971cee9)
+![sanojen tarkastus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/56542e0b-b3db-44d8-9830-b68ff25a3e00)
+![tallennusSanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/11a688e8-3f5a-4fcb-90de-a5b3ff571cf8)
+
+
+
+![ajanotto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/539af7b6-e1b0-44e6-a16e-fc3bb5b96ca7)
+
+![tallennus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/77736927-79a4-465b-8b4b-e83aa54a2811)
+
 ## Jatkokehitysideat
 - Muutaman löydetyn bugin korjaus esimerkiksi välillä muistipelin kortit eivät käänny.
 - Korttien kääntämisen tulisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
