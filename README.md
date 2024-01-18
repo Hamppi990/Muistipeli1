@@ -78,7 +78,7 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 ## Koodin esittely
 ### Yleinen
 
-Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi siis avaa uuden formsin ja piilottaa nykyisen.
+Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi siis avaa uuden formsin ja piilottaa nykyisen formsin.
 ``` C#
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -228,7 +228,7 @@ Pelin aloitus koodi. Koodi joka kierroksen alussa resetoi kuvien ominaisuudet ja
 
         }
 ```
-Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuvat tulevat.
+Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuvat tulevat. (tämä on koodi 3x4 ruudukosta joten koodi tekee 12 kuvaa yhteensä) Koodi tarkastaa onko rivissä tilaa. Jos on, lisätään kuva riviin. Jos rivi on täynnä siirrytään seuraavaan riviin kunnes kuvia on yhteensä 12.
 ``` C#
         private void LoadPicture()
         {
@@ -291,7 +291,7 @@ Aikaraja koodi. Koodi miinustaa "countDown" arvosta joka sekunti yhden pisteen. 
         }
 ```
 
-Korttien kääntämis koodi.
+Kuvien näyttäminen koodissa. Koodi lataa kuvan tiedostosta siinä olevan tagin perusteella ja asettaa saman tagin ensimmäiselle ja toiselle pelaajan valinnalle.
 ``` C#
         private void NewPic_Click(object sender, EventArgs e)
         {
@@ -327,7 +327,7 @@ Korttien kääntämis koodi.
 ```
 
 
-Korttien tarkastaminen.
+Korttien tarkastaminen. Koodi tarkastaa onko kuvat samat ja täten parit, jos kuvat ovat samat niin käyttäjälle annetaan piste. Koodi myös kasvattaa käännettyjen korttien määrää joka kerta kun käännät kortteja. Koodi tarkastaa onko kortteja enään jäljellä, jos ei niin tulee voittoruutu.
 ``` C#
         private void CheckPicture(PictureBox A, PictureBox B)
         {
@@ -364,6 +364,25 @@ Korttien tarkastaminen.
             }
 
         }
+```
+Muistipelien tulosten lukeminen vaikeustasovalikossa. Koodi lukee viimeiseksi tallennetut tiedot muistiosta.
+``` C#
+ string filePath1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "HelponMuistipelinTulos.txt");
+ InitializeComponent();
+ if (File.Exists(filePath1))
+ {
+     string[] lines = File.ReadAllLines(filePath1);
+     if (lines.Length > 0)
+     {
+         lblTime.Text = lines[0];
+         lblStatus.Text = lines[1];
+         lblMatch.Text = lines[2];
+     }
+ }
+ else
+ {
+     Console.WriteLine("Tiedostoa ei löytynyt.");
+ }
 ```
 
 **Vaikeassa muistipelissä:**
