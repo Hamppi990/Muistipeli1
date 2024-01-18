@@ -78,7 +78,7 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 ## Koodin esittely
 ### Yleinen
 
-Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi myös toistaa äänen kun nappia painaa.
+Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi siis avaa uuden formsin ja piilottaa nykyisen.
 
 ![PäävalikkoKoodi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/da278d0e-96b3-407a-b19b-3fe6313ad8bb)
 
@@ -103,11 +103,17 @@ Tuloksen lukeminen tiedostosta. Pelin loputtua pelaaja voi lukea tuloksensa muis
 
 ![tallennusSanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/11a688e8-3f5a-4fcb-90de-a5b3ff571cf8)
 
+Ajanotto koodi. Koodi lisää "countUp" arvoon joka sekunti yhden pisteen. Ruudulla näkyy tulos alussa sekunteina ja kun pisteitä on yli 60, ruudulla näkyy aika minuutteina ja sekunteina.
 
 ![ajanotto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/539af7b6-e1b0-44e6-a16e-fc3bb5b96ca7)
 
+### Muistipeli
+![Näyttökuva 2024-01-18 164250](https://github.com/Hamppi990/Muistipeli1/assets/87445182/bcebb6a1-836b-492a-8b8c-ddd472208c2c)
+
+![Näyttökuva 2024-01-18 164342](https://github.com/Hamppi990/Muistipeli1/assets/87445182/1f26b4a3-c8fe-4b34-bb2b-345ac1dc3922)
+![Näyttökuva 2024-01-18 164352](https://github.com/Hamppi990/Muistipeli1/assets/87445182/653cfa97-0f63-4d24-b5ab-b8662ef75220)
 
 ## Jatkokehitysideat
 - Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
-- Korttien kääntämisen tulisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
+- Korttien kääntämisen voisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
 - Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli pelaajan ei tarvitsisi poistua sovelluksesta.
