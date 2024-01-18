@@ -30,6 +30,7 @@ Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
 ![niilo22](https://github.com/Hamppi990/Muistipeli1/assets/87445182/63f99042-9cba-40d8-9b61-d116be47d42c)
 
 ## Sovelluksen esittely
+Kun pelin käynnistää käynnistyy päävalikko, josta sitten voi valita kumpaa peliä haluaa pelata.
 ![päävalikko](https://github.com/Hamppi990/Muistipeli1/assets/87445182/52e97181-927b-4e7c-9411-194d737d23a0)
 ![sanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/e315c7be-bd84-49b7-9200-15c79c864f1e)
 ![sanapelivoitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/3a8ae0ce-ede4-4ee0-a0b6-8a067adcad57)
