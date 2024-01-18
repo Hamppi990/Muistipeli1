@@ -12,3 +12,4 @@ Pelaajan tavoitteena on löytää kaikki kuvaparit mahdollisimman vähillä yrit
 ### Voittaminen
 Peli päättyy, kun kaikki kuvaparit on löydetty.
 Lisätavoiteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimalla ajalla.
+Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
