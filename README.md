@@ -77,10 +77,24 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 
 ## Koodin esittely
 
+Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi myös toistaa äänen kun nappia painaa.
+
 ![PäävalikkoKoodi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/da278d0e-96b3-407a-b19b-3fe6313ad8bb)
+
+Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. (Rivi 33-35) Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta kun pelin käynnistää uudelleen. (Rivi 24 ja 40).
+
 ![sanalista](https://github.com/Hamppi990/Muistipeli1/assets/87445182/20909026-a8ca-418a-842f-f6ff743e9ffa)
+
+Sanojen piilotus. Koodi poistaa sanasta kolme satunnaista kirjainta ja lisää niiden tilalle alaviivan "_".
+
 ![sanojenpiilotus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/22692f10-fad1-4ebb-bd43-963eb971cee9)
+
+Sanojen tarkastus koodi. Koodi tarkastaa onko pelaajan syöttämä sama kuin ruudulla oleva sana. Jos sana on sama, niin ruudulla näkyy teksti "Oikein" ja pelaaja saa yhden pisteen. Jos sana on eri, niin ruudulla näkyy teksti "Väärin" ja pelaaja ei saa pistettä.
+
 ![sanojen tarkastus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/56542e0b-b3db-44d8-9830-b68ff25a3e00)
+
+Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja kuluneen ajan.
+
 ![tallennusSanapeli](https://github.com/Hamppi990/Muistipeli1/assets/87445182/11a688e8-3f5a-4fcb-90de-a5b3ff571cf8)
 
 
@@ -92,4 +106,4 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 ## Jatkokehitysideat
 - Muutaman löydetyn bugin korjaus esimerkiksi välillä muistipelin kortit eivät käänny.
 - Korttien kääntämisen tulisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
-- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu formiin, eli ei tarvisi poistua sovelluksesta.
+- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli ei tarvitsisi poistua sovelluksesta.
