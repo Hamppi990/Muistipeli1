@@ -2,7 +2,7 @@
 
 ## Sovelluksen käyttötarkoitus ja toiminta
 
-Otin työkseni tehdä YouTubettaja "Niilo22" teemaisen muisti- ja sanapelin.
+Otin työkseni tehdä YouTubettaja "Niilo22" teemaisen muisti- ja sanapelin. Muistipelissä on Niilo22:sta kuvia ja sanapelissä sanat liittyvät Niilo22:sen hauskohin heittoihin.
 ## Muistipelissä:
 ### Pelin kulku
 Muistipelissä ideana on kääntää kaksi korttia kerrallaan yrittäen löytää kuvapareja.
