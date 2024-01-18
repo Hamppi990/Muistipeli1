@@ -80,7 +80,16 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 
 Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi siis avaa uuden formsin ja piilottaa nykyisen.
 
-![PäävalikkoKoodi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/da278d0e-96b3-407a-b19b-3fe6313ad8bb)
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            this.Hide();
+
+            Form2 form2 = Application.OpenForms.OfType<Form2>().FirstOrDefault() ?? new Form2();
+            form2.Show();
+        }
+
 
 Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
 
@@ -88,7 +97,7 @@ Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksen
 
 ### Sanapeli
 
-Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. (Rivi 33-35) Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta kun pelin käynnistää uudelleen. (Rivi 24 ja 40).
+Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. (Rivi 33-35) Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta, kun pelin käynnistää uudelleen. (Rivi 24 ja 40).
 
 ![sanalista](https://github.com/Hamppi990/Muistipeli1/assets/87445182/20909026-a8ca-418a-842f-f6ff743e9ffa)
 
@@ -118,6 +127,7 @@ Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuva
 
 ![Näyttökuva 2024-01-18 164352](https://github.com/Hamppi990/Muistipeli1/assets/87445182/653cfa97-0f63-4d24-b5ab-b8662ef75220)
 
+Aikaraja koodi. Koodi miinustaa "countDown" arvosta joka sekunti yhden pisteen. Yhteensä aikaa on 30 sekuntia jokaisessa muistipelissä. Jos aika loppuu ennen kuin pelaaja on löytänyt kaikki parit, pelaaja häviää pelin. Koodi näyttää jäljellä olevat kortit pelaajalle.
 
 
 ![Näyttökuva 2024-01-18 170837](https://github.com/Hamppi990/Muistipeli1/assets/87445182/d0a646dc-879c-448c-ab01-c2d17ca0afb6)
@@ -130,8 +140,12 @@ Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuva
 
 ![Näyttökuva 2024-01-18 164250](https://github.com/Hamppi990/Muistipeli1/assets/87445182/bcebb6a1-836b-492a-8b8c-ddd472208c2c)
 
+Vaikeassa muistipelissä:
+
+![Näyttökuva 2024-01-18 173547](https://github.com/Hamppi990/Muistipeli1/assets/87445182/785b3f21-dae3-4769-adef-a7ac658362e7)
 
 ## Jatkokehitysideat
 - Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
 - Korttien kääntämisen voisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
 - Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli pelaajan ei tarvitsisi poistua sovelluksesta.
+- Pelin taustalle voisi lisätä musiikkia.
