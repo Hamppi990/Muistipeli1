@@ -28,3 +28,9 @@ Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
 
 ## Vuokaavio sovelluksesta
 ![niilo22](https://github.com/Hamppi990/Muistipeli1/assets/87445182/63f99042-9cba-40d8-9b61-d116be47d42c)
+
+## Sovelluksen esittely
+
+## Koodin esittely
+
+## Jatkokehitysideat
