@@ -26,3 +26,4 @@ Pelaajan tavoitteena on arvata mahdollisimman monta sanaa ja mahdollisimman nope
 Peli päättyy, kun kaikki sanat on käyty läpi.
 Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
 
+![niilo22](https://github.com/Hamppi990/Muistipeli1/assets/87445182/63f99042-9cba-40d8-9b61-d116be47d42c)
