@@ -14,3 +14,15 @@ Pelaajan tavoitteena on löytää kaikki kuvaparit mahdollisimman vähillä yrit
 Peli päättyy, kun kaikki kuvaparit on löydetty.
 Lisätavoiteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimalla ajalla.
 Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
+## Sanapelissä:
+### Pelin kulku
+Sanapelissä ideana on arvata ruudulla näkyvä sana vihjeen avulla.
+Jos pelaaja arvaa sanan, se pysyy ruudulla ja pelaaja jatkaa pelaamista.
+Jos ei, kortit käännetään takaisin kuvapuoli alaspäin.
+### Tavoite
+Pelaajan tavoitteena on löytää kaikki kuvaparit mahdollisimman vähillä yrityksillä ja aikaa käyttäen.
+### Voittaminen
+Peli päättyy, kun kaikki kuvaparit on löydetty.
+Lisätavoiteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimalla ajalla.
+Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
+
