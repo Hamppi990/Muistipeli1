@@ -91,19 +91,52 @@ Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuot
         }
 ```
 Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
+``` C#
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SanapelinTulos.txt");
 
-![tallennus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/77736927-79a4-465b-8b4b-e83aa54a2811)
+            StringBuilder resultData = new StringBuilder();
+            resultData.AppendLine(labelScore.Text);
+            resultData.AppendLine(lbltime.Text);
 
+            File.WriteAllText(filePath, resultData.ToString());
+        }
+```
 ### Sanapeli
 
-Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. (Rivi 33-35) Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta, kun pelin käynnistää uudelleen. (Rivi 24 ja 40).
+Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta, kun pelin käynnistää uudelleen.
+``` C#
 
-![sanalista](https://github.com/Hamppi990/Muistipeli1/assets/87445182/20909026-a8ca-418a-842f-f6ff743e9ffa)
+words = words.OrderBy(x => random.Next()).ToArray();
 
+readonly string[] words = new[] {"Bengalintiikeri", "Käsirysy", "SpongeBob", "Viinatanssi", "Ylilauta",
+    "Juustopuuro", "Kahvinkeitin", "Fanipuhelin", "Viina", "Kukkosoosi", "Keksi", "Fragile-X",
+    "Olut", "Tabletti", "Rutles" };
+
+readonly Random random = new Random();
+
+```
 Sanojen piilotus. Koodi poistaa sanasta kolme satunnaista kirjainta ja lisää niiden tilalle alaviivan "_".
+``` C#
+ public void ShowWord()
+ {
+     Debug.WriteLine("ShowWord: index = " + index);
+     int position1 = random.Next(words[index].Length);
+     int position2 = random.Next(words[index].Length);
+     int position3 = random.Next(words[index].Length);
 
-![sanojenpiilotus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/22692f10-fad1-4ebb-bd43-963eb971cee9)
+     string word = words[index];
 
+     word = word.Remove(position1, 1).Insert(position1, "_");
+     word = word.Remove(position2, 1).Insert(position2, "_");
+     word = word.Remove(position3, 1).Insert(position3, "_");
+     
+     GuessLbl.Text = word;
+ }
+```
 Sanojen tarkastus koodi. Koodi tarkastaa onko pelaajan syöttämä sama kuin ruudulla oleva sana. Jos sana on sama, niin ruudulla näkyy teksti "Oikein" ja pelaaja saa yhden pisteen. Jos sana on eri, niin ruudulla näkyy teksti "Väärin" ja pelaaja ei saa pistettä.
 
 ![sanojen tarkastus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/56542e0b-b3db-44d8-9830-b68ff25a3e00)
