@@ -2,5 +2,9 @@
 
 ## Sovelluksen käyttötarkoitus ja toiminta
 
-Otin työkseni tehdä YouTubettaja "Niilo22" teemaisen muisti- ja sanapelin. Muistipelissä ideana on kääntää kaksi korttia kerrallaan yrittäen löytää kuvapareja. Jos pelaaja löytää parin, se pysyy ruudulla ja pelaaja jatkaa pelaamista. Jos ei, kortit käännetään takaisin kuvapuoli alaspäin.
+Otin työkseni tehdä YouTubettaja "Niilo22" teemaisen muisti- ja sanapelin.
+### Pelin kulku
+Muistipelissä ideana on kääntää kaksi korttia kerrallaan yrittäen löytää kuvapareja.
+Jos pelaaja löytää parin, se pysyy ruudulla ja pelaaja jatkaa pelaamista.
+Jos ei, kortit käännetään takaisin kuvapuoli alaspäin.
 
