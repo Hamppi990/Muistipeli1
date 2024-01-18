@@ -365,7 +365,7 @@ Korttien tarkastaminen. Koodi tarkastaa onko kuvat samat ja täten parit, jos ku
 
         }
 ```
-Muistipelien tulosten lukeminen vaikeustasovalikossa. Koodi lukee viimeiseksi tallennetut tiedot muistiosta.
+Muistipelien tulosten lukeminen vaikeustasovalikossa. Koodi lukee viimeiseksi tallennetut tiedot muistiosta. Viimeisimmät tulokset siis näkyvät vaikeustasovalikossa.
 ``` C#
  string filePath1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "HelponMuistipelinTulos.txt");
  InitializeComponent();
