@@ -78,3 +78,6 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 ## Koodin esittely
 
 ## Jatkokehitysideat
+- Muutaman löydetyn bugin korjaus esimerkiksi välillä muistipelin kortit eivät käänny.
+- Korttien kääntämisen tulisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
+- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu formiin, eli ei tarvisi poistua sovelluksesta.
