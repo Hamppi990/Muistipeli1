@@ -71,7 +71,8 @@ Tältä näyttää kun valitsee vaikeustasovalikosta vaikean vaikeustason ja pel
 
 Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli loppuu ja sen voi aloittaa sitten alusta.
 
-![pommi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/32f409b2-38b7-4fe3-9bae-1f420f48a1fb)
+![pommi](https://github.com/Hamppi990/Muistipeli1/assets/87445182/1762fe19-366d-4baf-86bb-3216bb28172b)
+
 
 
 ## Koodin esittely
