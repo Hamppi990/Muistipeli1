@@ -132,6 +132,8 @@ namespace muistipeli
             }
             soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/cardFlip.wav";
             soundPlayer.Play();
+
+
             if (choice1 == "9" && choice2 == "9")
             {
 
