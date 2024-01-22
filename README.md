@@ -12,7 +12,7 @@ Jos ei, kortit käännetään takaisin kuvapuoli alaspäin.
 Pelaajan tavoitteena on löytää kaikki kuvaparit mahdollisimman vähillä yrityksillä ja aikaa käyttäen.
 ### Voittaminen
 Peli päättyy, kun kaikki kuvaparit on löydetty.
-Lisätavoiteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimalla ajalla.
+Lisätavoitteena on löytää kortit mahdollisimman vähillä yrityksillä tai nopeimmalla ajalla.
 Tuloksen voi tallentaa ja sitä voi myöhemmin tarkastella.
 
 ## Sanapelissä:
@@ -45,7 +45,7 @@ Pelin tuloksen voi tässä vaiheessa tallentaa tai pelin voi aloittaa alusta.
 ![sanapelivoitto](https://github.com/Hamppi990/Muistipeli1/assets/87445182/3a8ae0ce-ede4-4ee0-a0b6-8a067adcad57)
 
 Tältä näyttää kun pelaaja valitsee päävalikosta muistipelin. Tässä valikossa voi valita muistipelissä olevan vaikeustason.
-Helpossa vaikeustasossa on 2x5 ruudukko. Keksitasossa on 3x4 ruudukko. Vaikeassa vaikeustasossa on 4x4 ruudukko ja mukana on myös "pommi pari" minkä yhdistäessä, lopettaa pelin välittömästi.
+Helpossa vaikeustasossa on 2x5 ruudukko. Keksitasossa on 3x4 ruudukko. Vaikeassa vaikeustasossa on 4x4 ruudukko ja mukana on myös "pommi pari" minkä yhdistäessä, peli loppuu välittömästi.
 
 ![vaikeus](https://github.com/Hamppi990/Muistipeli1/assets/87445182/cb5a69e7-0d62-46a1-8826-8a752a4a16cd)
 
@@ -76,8 +76,336 @@ Tältä näyttää kun vaikeassa vaikeustasossa yhdistää "pommiparin". Peli lo
 
 
 ## Koodin esittely
+### Yleinen
 
+Valikonvaihto koodi, jota käytetään esim. päävalikossa valitsemaan pelimuoto. Koodi siis avaa uuden formsin ja piilottaa nykyisen formsin.
+``` C#
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            this.Hide();
+
+            Form2 form2 = Application.OpenForms.OfType<Form2>().FirstOrDefault() ?? new Form2();
+            form2.Show();
+        }
+```
+Tuloksen tallentaminen tiedostoon. Pelin loputtua pelaaja voi tallentaa tuloksensa "Omat tiedostot" kansioon painamalla "Tallenna tuloksesi" nappia. Koodi kirjoittaa tiedostoon pisteet ja ajan. (Koodi kirjoittaa myös muistipelissä käännettyjen korttien määrän.)
+``` C#
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SanapelinTulos.txt");
+
+            StringBuilder resultData = new StringBuilder();
+            resultData.AppendLine(labelScore.Text);
+            resultData.AppendLine(lbltime.Text);
+
+            File.WriteAllText(filePath, resultData.ToString());
+        }
+```
+### Sanapeli
+
+Sanapelissä käytettävien sanojen lista. Ruudulla arvattavat sanat ovat kirjoitettu tähän. Koodi myös tekee sanojen järjestyksestä satunnaisen joka kerta, kun pelin käynnistää uudelleen.
+``` C#
+
+words = words.OrderBy(x => random.Next()).ToArray();
+
+readonly string[] words = new[] {"Bengalintiikeri", "Käsirysy", "SpongeBob", "Viinatanssi", "Ylilauta",
+    "Juustopuuro", "Kahvinkeitin", "Fanipuhelin", "Viina", "Kukkosoosi", "Keksi", "Fragile-X",
+    "Olut", "Tabletti", "Rutles" };
+
+readonly Random random = new Random();
+
+```
+Sanojen piilotus. Koodi poistaa sanasta kolme satunnaista kirjainta ja lisää niiden tilalle alaviivan "_".
+``` C#
+ public void ShowWord()
+ {
+     Debug.WriteLine("ShowWord: index = " + index);
+     int position1 = random.Next(words[index].Length);
+     int position2 = random.Next(words[index].Length);
+     int position3 = random.Next(words[index].Length);
+
+     string word = words[index];
+
+     word = word.Remove(position1, 1).Insert(position1, "_");
+     word = word.Remove(position2, 1).Insert(position2, "_");
+     word = word.Remove(position3, 1).Insert(position3, "_");
+     
+     GuessLbl.Text = word;
+ }
+```
+Sanojen tarkastus koodi. Koodi tarkastaa onko pelaajan syöttämä sama kuin ruudulla oleva sana. Jos sana on sama, niin ruudulla näkyy teksti "Oikein" ja pelaaja saa yhden pisteen. Jos sana on eri, niin ruudulla näkyy teksti "Väärin" ja pelaaja ei saa pistettä.
+``` C#
+public void CheckWord()
+{
+    if(Word.Text.Equals(words[index]))
+    {
+        labelResult.Text = "Oikein";
+        labelResult.BackColor = Color.Green;
+        score++;
+        soundPlayer.SoundLocation = "Sound/Correct.wav";
+    }
+    else
+    {
+        labelResult.Text = "Väärin";
+        labelResult.BackColor = Color.Red;
+        soundPlayer.SoundLocation = "Sound/Incorrect.wav";
+    }
+}
+```
+Tuloksen lukeminen tiedostosta. Pelin loputtua pelaaja voi lukea tuloksensa muistiosta, joka avautuu kun painaa "Katso viimeisin tulos" painiketta.
+``` C#
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SanapelinTulos.txt");
+
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    Process.Start("notepad.exe", filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tiedoston avaaminen epäonnistui: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tiedostoa ei löydy.");
+            }
+        }
+```
+Ajanotto koodi. Koodi lisää "countUp" arvoon joka sekunti yhden pisteen. Ruudulla näkyy tulos alussa sekunteina ja kun pisteitä on yli 60, ruudulla näkyy aika minuutteina ja sekunteina.
+``` C#
+        private void TimerEvent(object sender, EventArgs e)
+        {
+            countUp++;
+
+            int minutes = countUp / 60;
+            int seconds = countUp % 60;
+            if (countUp >= 60)
+            {
+                lbltime.Text = "Aikaa mennyt: " + minutes + "m " + seconds + "s";
+            }
+            else
+            {
+                lbltime.Text = "Aikaa mennyt: " + seconds + "s";
+            }
+        }
+```
+### Muistipeli
+
+Pelin aloitus koodi. Koodi joka kierroksen alussa resetoi kuvien ominaisuudet ja tekee kuvien sijainnista satunnaisen joka kerta kun pelin aloittaa uudelleen. Koodi myös resetoi tuloksen ja aloittaa ajan.
+``` C#
+        private void StartGameEvent(object sender, EventArgs e)
+        {
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.Play();
+            btnStart.Enabled = false;
+            btnRestart.Enabled = true;
+            matches = 0;
+            var randomList = numbers.OrderBy(x => Guid.NewGuid()).ToList();
+
+            numbers = randomList;
+
+            for (int i = 0; i < pictures.Count; i++)
+            {
+                pictures[i].Image = null;
+                pictures[i].Tag = numbers[i].ToString();
+            }
+
+            Tries = 0;
+            lblStatus.Text = "Käännetyt kortit: " + Tries;
+            lblTime.Text = "Aikaa jäljellä: " + timeTotal + " / 30s";
+            lblMatch.Text = "Löydetyt parit: " + matches + " / 6";
+            gameOver = false;
+            GameTime.Start();
+            countDown = timeTotal;
+
+        }
+```
+Kuvien lataaminen. Koodi asettaa ruudukon tasaisesti ruudulle, jonka taakse kuvat tulevat. (tämä on koodi 3x4 ruudukosta joten koodi tekee 12 kuvaa yhteensä) Koodi tarkastaa onko rivissä tilaa. Jos on, lisätään kuva riviin. Jos rivi on täynnä siirrytään seuraavaan riviin kunnes kuvia on yhteensä 12.
+``` C#
+        private void LoadPicture()
+        {
+            int LeftPosition = 155;
+            int TopPosition = 60;
+            int rows = 0;
+
+            for (int Size = 0; Size < 12; Size++)
+            {
+                PictureBox NewPic = new PictureBox
+                {
+                    Height = 50,
+                    Width = 50,
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    BackColor = Color.LightSlateGray
+                };
+                NewPic.Click += NewPic_Click;
+                pictures.Add(NewPic);
+
+                if (rows < 3)
+                {
+                    rows++;
+                    NewPic.Left = LeftPosition;
+                    NewPic.Top = TopPosition;
+                    Controls.Add(NewPic);
+                    LeftPosition += 60;
+
+                }
+
+                if (rows == 3)
+                {
+                    rows = 0;
+                    LeftPosition = 155;
+                    TopPosition += 60;
+
+                }
+            }
+            RestartGame();
+        }
+```
+Aikaraja koodi. Koodi miinustaa "countDown" arvosta joka sekunti yhden pisteen. Yhteensä aikaa on 30 sekuntia jokaisessa muistipelissä. Jos aika loppuu ennen kuin pelaaja on löytänyt kaikki parit, pelaaja häviää pelin. Koodi näyttää jäljellä olevat kortit pelaajalle.
+``` C#
+        private void TimerEvent(object sender, EventArgs e)
+        {
+            countDown--;
+            progressBar1.Value = countDown;
+            lblTime.Text = "Aikaa jäljellä: " + countDown + " / 30s";
+
+            if (countDown < 1)
+            {
+                GameOver("Aika loppui, hävisit pelin :( ");
+
+                foreach (PictureBox x in pictures)
+                    if (x.Tag != null)
+                    {
+                        x.Image = Image.FromFile("pics/" + (string)x.Tag + ".png");
+                    }
+            }
+
+        }
+```
+
+Kuvien näyttäminen koodissa. Koodi lataa kuvan tiedostosta siinä olevan tagin perusteella ja asettaa saman tagin ensimmäiselle ja toiselle pelaajan valinnalle.
+``` C#
+        private void NewPic_Click(object sender, EventArgs e)
+        {
+            if (gameOver || btnRestart.Enabled == false)
+            {
+                return;
+            }
+            if (choice1 == null)
+            {
+                picA = sender as PictureBox;
+                if (picA.Tag != null && picA.Image == null)
+                {
+                    picA.Image = Image.FromFile("pics/" + (string)picA.Tag + ".png");
+                    choice1 = (string)picA.Tag;
+                }
+            }
+            else if (choice2 == null)
+            {
+                picB = sender as PictureBox;
+                if (picB.Tag != null && picB.Image == null)
+                {
+                    picB.Image = Image.FromFile("pics/" + (string)picB.Tag + ".png");
+                    choice2 = (string)picB.Tag;
+                }
+            }
+            else
+            {
+                CheckPicture(picA, picB);
+            }
+            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/cardFlip.wav";
+            soundPlayer.Play();
+
+```
+
+
+Korttien tarkastaminen. Koodi tarkastaa onko kuvat samat ja täten parit, jos kuvat ovat samat niin käyttäjälle annetaan piste. Koodi myös kasvattaa käännettyjen korttien määrää joka kerta kun käännät kortteja. Koodi tarkastaa onko kortteja enään jäljellä, jos ei niin tulee voittoruutu.
+``` C#
+        private void CheckPicture(PictureBox A, PictureBox B)
+        {
+            if (choice1 == choice2)
+            {
+                A.Tag = null;
+                B.Tag = null;
+                matches++;
+                Tries++;
+                lblMatch.Text = "Löydetyt parit: " + matches + " / 6";
+                lblStatus.Text = "Käännetyt kortit: " + Tries;
+            }
+            else
+            {
+                Tries++;
+                lblStatus.Text = "Käännetyt kortit: " + Tries;
+            }
+
+            choice1 = null;
+            choice2 = null;
+            foreach (PictureBox pics in pictures.ToList())
+            {
+                if (pics.Tag != null)
+                {
+                    pics.Image = null;
+                }
+            }
+
+            if (pictures.All(o => o.Tag == pictures[0].Tag))
+            {
+                GameOver("Löysit kaikki parit! Hienoa!");
+
+
+            }
+
+        }
+```
+Muistipelien tulosten lukeminen vaikeustasovalikossa. Koodi lukee viimeiseksi tallennetut tiedot muistiosta. Viimeisimmät tulokset siis näkyvät vaikeustasovalikossa.
+``` C#
+ string filePath1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "HelponMuistipelinTulos.txt");
+ InitializeComponent();
+ if (File.Exists(filePath1))
+ {
+     string[] lines = File.ReadAllLines(filePath1);
+     if (lines.Length > 0)
+     {
+         lblTime.Text = lines[0];
+         lblStatus.Text = lines[1];
+         lblMatch.Text = lines[2];
+     }
+ }
+ else
+ {
+     Console.WriteLine("Tiedostoa ei löytynyt.");
+ }
+```
+
+**Vaikeassa muistipelissä:**
+
+Pommin tarkastus koodi. Koodi tarkastaa onko pelaaja yhdistänyt "pommiparin", jos on niin peli päättyy.
+``` C#
+if (choice1 == "9" && choice2 == "9")
+{
+
+    foreach (PictureBox x in pictures)
+        if (x.Tag != null)
+        {
+            x.Image = Image.FromFile("pics/" + (string)x.Tag + ".png");
+        }
+    soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/bomb.wav";
+    soundPlayer.Play();
+    GameOver1("Peli päättyi, koska yhdistit pommit! ");
+    return;
+
+}
+```
 ## Jatkokehitysideat
-- Muutaman löydetyn bugin korjaus esimerkiksi välillä muistipelin kortit eivät käänny.
-- Korttien kääntämisen tulisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman tarvetta klikata ruutua uudelleen.
-- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu formiin, eli ei tarvisi poistua sovelluksesta.
+- Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
+- Korttien kääntämisen voisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman, että pitää klikata ruutua uudelleen.
+- Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli pelaajan ei tarvitsisi poistua sovelluksesta.
+- Pelin taustalle voisi lisätä musiikkia.
