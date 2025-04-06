@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_36F27D64A44B4BC9A1E57ED2EF337220"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3D2E8E7E0CD74624BCF57106F67FBFA4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -46,6 +52,12 @@
         "Entry"
         {
         "MsmKey" = "8:_5F4800B2C3A24B73B343608BDE241EC9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_608CB60BF7284E40A380ABF1F2749CD7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -99,12 +111,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CA534D91C9E840B8BEA6ADF8B8585640"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_CE731B71B04E4AD89BA16900C09B194C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -130,7 +136,7 @@
         "Entry"
         {
         "MsmKey" = "8:_E51155A730575F009BF74571D0D8B225"
-        "OwnerKey" = "8:_CA534D91C9E840B8BEA6ADF8B8585640"
+        "OwnerKey" = "8:_36F27D64A44B4BC9A1E57ED2EF337220"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,7 +154,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CA534D91C9E840B8BEA6ADF8B8585640"
+        "OwnerKey" = "8:_36F27D64A44B4BC9A1E57ED2EF337220"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -169,6 +175,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -185,6 +199,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -318,6 +340,26 @@
             {
             "SourcePath" = "8:..\\muistipeli\\bin\\Debug\\pics\\ICON.ico"
             "TargetName" = "8:ICON.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_4C989798867A46BBB40A4ECD195A14A1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_608CB60BF7284E40A380ABF1F2749CD7"
+            {
+            "SourcePath" = "8:..\\muistipeli\\bin\\Debug\\pics\\smoke.gif"
+            "TargetName" = "8:smoke.gif"
             "Tag" = "8:"
             "Folder" = "8:_4C989798867A46BBB40A4ECD195A14A1"
             "Condition" = "8:"
@@ -712,12 +754,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Joonas Juntunen"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Niilo22Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Joonas Juntunen"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -832,7 +874,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_CA534D91C9E840B8BEA6ADF8B8585640"
+            "Target" = "8:"
             "Folder" = "8:_5B99C59AA55940DDAA7168DC648EA413"
             "WorkingFolder" = "8:_C118EABEF4B94FCCB688103D8B8C1158"
             "Icon" = "8:_CE731B71B04E4AD89BA16900C09B194C"
@@ -1237,7 +1279,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_CA534D91C9E840B8BEA6ADF8B8585640"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_36F27D64A44B4BC9A1E57ED2EF337220"
             {
             "SourcePath" = "8:..\\muistipeli\\obj\\Debug\\muistipeli.exe"
             "TargetName" = "8:"

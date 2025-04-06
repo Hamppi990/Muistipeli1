@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Media;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Threading.Tasks;
 
 namespace muistipeli
 {
@@ -25,6 +26,7 @@ namespace muistipeli
         readonly int timeTotal = 30;
         int countDown;
         bool gameOver = false;
+        bool clickLock = false;
 
         public Form1()
         {
@@ -55,14 +57,14 @@ namespace muistipeli
 
         private void RestartGameEvent(object sender, EventArgs e)
         {
-            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/Click.wav";
+            soundPlayer.SoundLocation = "Sound/Click.wav";
             soundPlayer.Play();
-            btnStart.Enabled = true;
-            btnRestart.Enabled = false;
-            GameTime.Enabled = false;
+
+            RestartGame();
+
+            btnStart.Enabled = false;
+            btnRestart.Enabled = true;
             btnSave.Enabled = false;
-            Tries = 0;
-            matches = 0;
         }
 
         private void LoadPicture()
@@ -104,46 +106,77 @@ namespace muistipeli
             RestartGame();
         }
 
-        private void NewPic_Click(object sender, EventArgs e)
+        private async void NewPic_Click(object sender, EventArgs e)
         {
-            if (gameOver || btnRestart.Enabled == false)
-            {
+            if (gameOver || btnRestart.Enabled == false || clickLock)
                 return;
-            }
-            if (choice1 == null)
-            {
-                picA = sender as PictureBox;
-                if (picA.Tag != null && picA.Image == null)
-                {
-                    picA.Image = Image.FromFile("pics/" + (string)picA.Tag + ".png");
-                    choice1 = (string)picA.Tag;
-                }
-            }
-            else if (choice2 == null)
-            {
-                picB = sender as PictureBox;
-                if (picB.Tag != null && picB.Image == null)
-                {
-                    picB.Image = Image.FromFile("pics/" + (string)picB.Tag + ".png");
-                    choice2 = (string)picB.Tag;
-                }
-            }
-            else
-            {
-                CheckPicture(picA, picB);
-            }
-            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/cardFlip.wav";
+
+
+            if (!(sender is PictureBox clickedPic) || clickedPic.Image != null || clickedPic.Tag == null)
+                return;
+
+            clickedPic.Image = Image.FromFile("pics/" + (string)clickedPic.Tag + ".png");
+
+            soundPlayer.SoundLocation = "Sound/cardFlip.wav";
             soundPlayer.Play();
 
+            if (choice1 == null)
+            {
+                picA = clickedPic;
+                choice1 = (string)clickedPic.Tag;
+            }
+            else if (choice2 == null && clickedPic != picA)
+            {
+                picB = clickedPic;
+                choice2 = (string)clickedPic.Tag;
+
+                clickLock = true;
+                await Task.Delay(300);
+
+
+                CheckPicture(picA, picB);
+
+                await Task.Delay(200);
+                clickLock = false;
+            }
         }
 
         private void RestartGame()
         {
+            GameTime.Stop();
+            // resetoidaan muuttujat
+            choice1 = null;
+            choice2 = null;
+            picA = null;
+            picB = null;
+            matches = 0;
+            Tries = 0;
+            gameOver = false;
+            clickLock = false;
 
+            lblMatch.Text = "Löydetyt parit: 0 / 7";
+            lblStatus.Text = "Käännetyt kortit: 0";
+            lblTime.Text = "Aikaa jäljellä: " + timeTotal + " / 30s";
+
+            countDown = timeTotal;
+            progressBar1.Value = countDown;
+
+            numbers = numbers.OrderBy(x => Guid.NewGuid()).ToList();
+
+            for (int i = 0; i < pictures.Count; i++)
+            {
+                pictures[i].Image = null;
+                pictures[i].Tag = numbers[i].ToString();
+                pictures[i].BackColor = Color.LightSlateGray;
+            }
+
+            GameTime.Start();
         }
 
         private void CheckPicture(PictureBox A, PictureBox B)
         {
+            if (A == null || B == null)
+                return;
             if (choice1 == choice2)
             {
                 A.Tag = null;
