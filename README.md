@@ -405,7 +405,7 @@ if (choice1 == "9" && choice2 == "9")
 }
 ```
 ## Jatkokehitysideat
-- Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.
-- Korttien kääntämisen voisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman, että pitää klikata ruutua uudelleen.
+- ~Muutaman löydetyn bugin korjaus, esimerkiksi välillä muutama muistipelin kortti ei käänny.~ TEHTY 6.4.25
+- ~Korttien kääntämisen voisi olla sulavampaa muistipelissä, ja kun pelaaja on löytänyt kaikki korttiparit, pelin tulisi päättyä automaattisesti ilman, että pitää klikata ruutua uudelleen.~ TEHTY 6.4.25
 - Vinkki-systeemi sanapeliin, eli pelaaja voisi katsoa videon, jossa Niilo22 sanoo arvattavan sanan jossain lauseessa ja siten auttaa pelaajaa arvaamaan sanan. Video olisi integroitu Formsiin, eli pelaajan ei tarvitsisi poistua sovelluksesta.
 - Pelin taustalle voisi lisätä musiikkia.
