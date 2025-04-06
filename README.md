@@ -141,7 +141,7 @@ Sanojen tarkastus koodi. Koodi tarkastaa onko pelaajan syöttämä sama kuin ruu
 ``` C#
 public void CheckWord()
 {
-    if(Word.Text.Equals(words[index]))
+    if(Word.Text.ToLower(new CultureInfo("fi-FI")).Equals(words[index].ToLower(new CultureInfo("fi-FI"))))
     {
         labelResult.Text = "Oikein";
         labelResult.BackColor = Color.Green;
