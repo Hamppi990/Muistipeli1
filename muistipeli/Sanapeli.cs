@@ -8,6 +8,7 @@ using System.Media;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace muistipeli
 {
@@ -105,7 +106,7 @@ namespace muistipeli
         }
         public void CheckWord()
         {
-            if(Word.Text.Equals(words[index]))
+            if(Word.Text.ToLower(new CultureInfo("fi-FI")).Equals(words[index].ToLower(new CultureInfo("fi-FI"))))
             {
                 labelResult.Text = "Oikein";
                 labelResult.BackColor = Color.Green;

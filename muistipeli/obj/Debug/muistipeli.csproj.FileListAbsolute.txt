@@ -38,3 +38,18 @@ C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
 C:\Users\joona\source\repos\Muistipeli-master\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
 C:\Users\s3jujo03\source\repos\muistipeli-master\muistipeli\obj\Debug\muistipeli.csprojAssemblyReference.cache
+C:\Users\joona\Documents\Uusi kansio\muistipeli\bin\Debug\muistipeli.exe.config
+C:\Users\joona\Documents\Uusi kansio\muistipeli\bin\Debug\muistipeli.exe
+C:\Users\joona\Documents\Uusi kansio\muistipeli\bin\Debug\muistipeli.pdb
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.csproj.AssemblyReference.cache
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Form1.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Form2.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Form3.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Form4.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Form5.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Sanapeli.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.Properties.Resources.resources
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.csproj.GenerateResource.cache
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.csproj.CoreCompileInputs.cache
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.exe
+C:\Users\joona\Documents\Uusi kansio\muistipeli\obj\Debug\muistipeli.pdb
