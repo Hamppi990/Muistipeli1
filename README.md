@@ -293,36 +293,37 @@ Aikaraja koodi. Koodi miinustaa "countDown" arvosta joka sekunti yhden pisteen. 
 
 Kuvien näyttäminen koodissa. Koodi lataa kuvan tiedostosta siinä olevan tagin perusteella ja asettaa saman tagin ensimmäiselle ja toiselle pelaajan valinnalle.
 ``` C#
-        private void NewPic_Click(object sender, EventArgs e)
+        private async void NewPic_Click(object sender, EventArgs e)
         {
-            if (gameOver || btnRestart.Enabled == false)
-            {
+            if (gameOver || btnRestart.Enabled == false || clickLock)
                 return;
-            }
+
+
+            if (!(sender is PictureBox clickedPic) || clickedPic.Image != null || clickedPic.Tag == null)
+                return;
+
+            clickedPic.Image = Image.FromFile("pics/" + (string)clickedPic.Tag + ".png");
+
+            soundPlayer.SoundLocation = "Sound/cardFlip.wav";
+            soundPlayer.Play();
+
             if (choice1 == null)
             {
-                picA = sender as PictureBox;
-                if (picA.Tag != null && picA.Image == null)
-                {
-                    picA.Image = Image.FromFile("pics/" + (string)picA.Tag + ".png");
-                    choice1 = (string)picA.Tag;
-                }
+                picA = clickedPic;
+                choice1 = (string)clickedPic.Tag;
             }
-            else if (choice2 == null)
+            else if (choice2 == null && clickedPic != picA)
             {
-                picB = sender as PictureBox;
-                if (picB.Tag != null && picB.Image == null)
-                {
-                    picB.Image = Image.FromFile("pics/" + (string)picB.Tag + ".png");
-                    choice2 = (string)picB.Tag;
-                }
-            }
-            else
-            {
+                picB = clickedPic;
+                choice2 = (string)clickedPic.Tag;
+                clickLock = true;
+                await Task.Delay(300);
+
                 CheckPicture(picA, picB);
+                await Task.Delay(200);
+                clickLock = false;
             }
-            soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/cardFlip.wav";
-            soundPlayer.Play();
+        }
 
 ```
 
@@ -331,6 +332,8 @@ Korttien tarkastaminen. Koodi tarkastaa onko kuvat samat ja täten parit, jos ku
 ``` C#
         private void CheckPicture(PictureBox A, PictureBox B)
         {
+            if (A == null || B == null)
+                return;
             if (choice1 == choice2)
             {
                 A.Tag = null;
@@ -389,19 +392,25 @@ Muistipelien tulosten lukeminen vaikeustasovalikossa. Koodi lukee viimeiseksi ta
 
 Pommin tarkastus koodi. Koodi tarkastaa onko pelaaja yhdistänyt "pommiparin", jos on niin peli päättyy.
 ``` C#
+// tarkistetaan yhdityikö pommit
 if (choice1 == "9" && choice2 == "9")
 {
-
     foreach (PictureBox x in pictures)
+    {
         if (x.Tag != null)
         {
-            x.Image = Image.FromFile("pics/" + (string)x.Tag + ".png");
+            x.Image = Image.FromFile("pics/smoke.gif");
         }
-    soundPlayer.SoundLocation = soundPlayer.SoundLocation = "Sound/bomb.wav";
-    soundPlayer.Play();
-    GameOver1("Peli päättyi, koska yhdistit pommit! ");
-    return;
+    }
 
+    soundPlayer.SoundLocation = "Sound/bomb.wav";
+    soundPlayer.Play();
+
+    await Task.Delay(1500);
+    GameOver1("Peli päättyi, koska yhdistit pommit!");
+
+    clickLock = false;
+    return;
 }
 ```
 ## Jatkokehitysideat
